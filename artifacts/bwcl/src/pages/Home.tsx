@@ -111,14 +111,14 @@ export default function Home() {
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={heroInView ? { opacity: 1, scale: 1 } : {}}
                 transition={{ delay: 0.4, duration: 0.6 }}
-                className="bg-[#939393] text-white p-8 rounded-[2rem] shadow-xl flex flex-col justify-between aspect-square"
+                className="bg-emerald-50 p-8 rounded-[2rem] shadow-xl flex flex-col justify-between aspect-square"
               >
-                <div className="h-14 w-14 rounded-2xl bg-white/10 flex items-center justify-center mb-auto">
-                  <Globe2 className="h-7 w-7 text-white" />
+                <div className="h-14 w-14 rounded-2xl bg-emerald-100 flex items-center justify-center mb-auto">
+                  <Globe2 className="h-7 w-7 text-emerald-600" />
                 </div>
                 <div>
-                  <div className="text-5xl font-bold font-serif tracking-tight mb-2">76+</div>
-                  <div className="text-slate-400 font-semibold">Countries Network</div>
+                  <div className="text-5xl font-bold font-serif tracking-tight mb-2 text-emerald-950">76+</div>
+                  <div className="text-emerald-700 font-semibold">Countries Network</div>
                 </div>
               </motion.div>
 
