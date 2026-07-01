@@ -9,7 +9,7 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Checkbox } from "@/components/ui/checkbox";
 import { useToast } from "@/hooks/use-toast";
-import { MapPin, Phone, Mail } from "lucide-react";
+import { MapPin, Phone, Mail, Train, Truck, Ship, Plane, Warehouse, Globe2, Package, Network, Zap } from "lucide-react";
 import { useCreateContact } from "@workspace/api-client-react";
 
 const formSchema = z.object({

@@ -53,6 +53,9 @@ export default function Home() {
           <Package  style={{ opacity: 0.06, animation: 'float-medium 8s ease-in-out infinite 2s' }}     className="absolute top-[38%] right-[30%] h-10 w-10 text-secondary" />
           <Globe2   style={{ opacity: 0.04, animation: 'float-slow 14s ease-in-out infinite 4s' }}      className="absolute bottom-[15%] right-[16%] h-16 w-16 text-primary" />
           <Warehouse style={{ opacity: 0.05, animation: 'drift-x 12s ease-in-out infinite 1s' }}        className="absolute top-[68%] left-[28%] h-12 w-12 text-primary" />
+          <Network  style={{ opacity: 0.05, animation: 'float-slow 11s ease-in-out infinite 2.5s' }}     className="absolute top-[30%] left-[20%] h-10 w-10 text-primary" />
+          <MapPin   style={{ opacity: 0.06, animation: 'float-medium 7s ease-in-out infinite 0.8s' }}    className="absolute bottom-[40%] right-[22%] h-10 w-10 text-secondary" />
+          <Zap      style={{ opacity: 0.05, animation: 'drift-x 9s ease-in-out infinite 3.5s' }}         className="absolute bottom-[35%] left-[35%] h-9 w-9 text-primary" />
 
           {/* Animated route network */}
           <svg className="absolute inset-0 w-full h-full" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" fill="none">

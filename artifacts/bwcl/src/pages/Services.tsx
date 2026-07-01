@@ -1,7 +1,7 @@
 import { SEO } from "@/seo/SEO";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Train, Truck, Ship, Plane, Warehouse, HardHat, ArrowRight } from "lucide-react";
+import { Train, Truck, Ship, Plane, Warehouse, HardHat, ArrowRight, Globe2, Package, Network, MapPin, Zap } from "lucide-react";
 
 export default function Services() {
   const services = [
