@@ -76,71 +76,72 @@ export default function Contact() {
         canonical="/contact"
       />
       
-      <section className="pt-32 pb-16 md:pb-20 bg-[#0B1F3A] text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 md:mb-6">Let's Connect</h1>
-          <p className="text-lg md:text-xl text-slate-300 max-w-2xl mx-auto font-light">Collaborating to move India forward. Partner with us to scale your logistics operations.</p>
+      <section className="pt-40 pb-20 bg-background">
+        <div className="container mx-auto px-6 text-center">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 font-serif text-foreground">Let's <span className="italic text-primary font-normal">Connect</span></h1>
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto font-medium">Collaborating to move India forward. Partner with us to scale your logistics operations.</p>
         </div>
       </section>
 
-      <section className="py-16 md:py-24 bg-slate-50">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-12 max-w-6xl mx-auto">
-            <div className="lg:col-span-1 space-y-8">
-              <div className="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-border">
-                <h3 className="text-xl font-bold text-slate-900 mb-6">Corporate Office</h3>
+      <section className="py-20 bg-white rounded-t-[4rem] shadow-[0_-8px_30px_rgb(0,0,0,0.04)]">
+        <div className="container mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 max-w-6xl mx-auto">
+            <div className="lg:col-span-5 space-y-8">
+              <div className="bg-background p-10 rounded-[2.5rem] shadow-sm border border-border">
+                <h3 className="text-3xl font-bold text-foreground mb-8 font-serif">Corporate Office</h3>
                 
-                <div className="space-y-6">
-                  <div className="flex gap-4">
-                    <MapPin className="h-6 w-6 text-secondary shrink-0" />
+                <div className="space-y-8">
+                  <div className="flex gap-5">
+                    <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                      <MapPin className="h-6 w-6 text-primary" />
+                    </div>
                     <div>
-                      <h4 className="font-semibold text-slate-900">Headquarters</h4>
-                      <p className="text-slate-600 text-sm mt-1 leading-relaxed">Door No. 5-106(85), Shop No. F16, 1st Floor, Canara Trade Centre, Bovikere, Nagarakatte Puttige Road, Moodbidri, Karnataka - 574227, India</p>
+                      <h4 className="font-bold text-foreground text-lg">Headquarters</h4>
+                      <p className="text-muted-foreground font-medium mt-2 leading-relaxed">Door No. 5-106(85), Shop No. F16, 1st Floor, Canara Trade Centre, Bovikere, Nagarakatte Puttige Road, Moodbidri, Karnataka - 574227, India</p>
                     </div>
                   </div>
                   
-                  <div className="flex gap-4">
-                    <Phone className="h-6 w-6 text-secondary shrink-0" />
+                  <div className="flex gap-5">
+                    <div className="h-12 w-12 rounded-full bg-secondary/10 flex items-center justify-center shrink-0">
+                      <Phone className="h-6 w-6 text-secondary" />
+                    </div>
                     <div>
-                      <h4 className="font-semibold text-slate-900">Phone</h4>
-                      <p className="text-slate-600 text-sm mt-1">+91 9483077277</p>
+                      <h4 className="font-bold text-foreground text-lg">Phone</h4>
+                      <p className="text-muted-foreground font-medium mt-2">+91 9483077277</p>
                     </div>
                   </div>
                   
-                  <div className="flex gap-4">
-                    <Mail className="h-6 w-6 text-secondary shrink-0" />
+                  <div className="flex gap-5">
+                    <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                      <Mail className="h-6 w-6 text-primary" />
+                    </div>
                     <div>
-                      <h4 className="font-semibold text-slate-900">Email</h4>
-                      <p className="text-slate-600 text-sm mt-1">info@bwcl.co.in</p>
+                      <h4 className="font-bold text-foreground text-lg">Email</h4>
+                      <p className="text-muted-foreground font-medium mt-2">info@bwcl.co.in</p>
                     </div>
                   </div>
                 </div>
               </div>
-              
-              <div className="bg-slate-200 rounded-2xl h-[250px] md:h-[300px] flex items-center justify-center border border-border overflow-hidden">
-                 {/* Map Placeholder or Iframe could go here. Keeping minimal as requested. */}
-                <div className="text-slate-500 font-medium">Map Area</div>
-              </div>
             </div>
             
-            <div className="lg:col-span-2">
-              <div className="bg-white p-6 md:p-10 rounded-2xl shadow-xl shadow-slate-200/50 border border-border">
-                <h2 className="text-2xl font-bold text-slate-900 mb-6 md:mb-8">Request a Quote</h2>
+            <div className="lg:col-span-7">
+              <div className="bg-white p-10 md:p-12 rounded-[3rem] shadow-xl shadow-slate-200 border border-slate-100">
+                <h2 className="text-3xl font-bold text-foreground mb-8 font-serif">Request a Quote</h2>
                 
                 <Form {...form}>
                   <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                       <FormField control={form.control} name="firstName" render={({ field }) => (
                         <FormItem>
-                          <FormLabel>First Name *</FormLabel>
-                          <FormControl><Input {...field} /></FormControl>
+                          <FormLabel className="font-bold text-foreground">First Name *</FormLabel>
+                          <FormControl><Input className="h-14 rounded-2xl bg-slate-50 border-transparent focus-visible:ring-primary focus-visible:bg-white" {...field} /></FormControl>
                           <FormMessage />
                         </FormItem>
                       )} />
                       <FormField control={form.control} name="lastName" render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Last Name *</FormLabel>
-                          <FormControl><Input {...field} /></FormControl>
+                          <FormLabel className="font-bold text-foreground">Last Name *</FormLabel>
+                          <FormControl><Input className="h-14 rounded-2xl bg-slate-50 border-transparent focus-visible:ring-primary focus-visible:bg-white" {...field} /></FormControl>
                           <FormMessage />
                         </FormItem>
                       )} />
@@ -149,15 +150,15 @@ export default function Contact() {
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                       <FormField control={form.control} name="email" render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Work Email *</FormLabel>
-                          <FormControl><Input type="email" {...field} /></FormControl>
+                          <FormLabel className="font-bold text-foreground">Work Email *</FormLabel>
+                          <FormControl><Input type="email" className="h-14 rounded-2xl bg-slate-50 border-transparent focus-visible:ring-primary focus-visible:bg-white" {...field} /></FormControl>
                           <FormMessage />
                         </FormItem>
                       )} />
                       <FormField control={form.control} name="phone" render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Phone Number *</FormLabel>
-                          <FormControl><Input type="tel" {...field} /></FormControl>
+                          <FormLabel className="font-bold text-foreground">Phone Number *</FormLabel>
+                          <FormControl><Input type="tel" className="h-14 rounded-2xl bg-slate-50 border-transparent focus-visible:ring-primary focus-visible:bg-white" {...field} /></FormControl>
                           <FormMessage />
                         </FormItem>
                       )} />
@@ -166,21 +167,21 @@ export default function Contact() {
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                       <FormField control={form.control} name="company" render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Company Name</FormLabel>
-                          <FormControl><Input {...field} /></FormControl>
+                          <FormLabel className="font-bold text-foreground">Company Name</FormLabel>
+                          <FormControl><Input className="h-14 rounded-2xl bg-slate-50 border-transparent focus-visible:ring-primary focus-visible:bg-white" {...field} /></FormControl>
                           <FormMessage />
                         </FormItem>
                       )} />
                       <FormField control={form.control} name="serviceRequired" render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Service Required *</FormLabel>
+                          <FormLabel className="font-bold text-foreground">Service Required *</FormLabel>
                           <Select onValueChange={field.onChange} defaultValue={field.value}>
                             <FormControl>
-                              <SelectTrigger>
+                              <SelectTrigger className="h-14 rounded-2xl bg-slate-50 border-transparent focus:ring-primary focus:bg-white font-medium">
                                 <SelectValue placeholder="Select a service" />
                               </SelectTrigger>
                             </FormControl>
-                            <SelectContent>
+                            <SelectContent className="rounded-xl border-border">
                               <SelectItem value="rail">Railway Logistics</SelectItem>
                               <SelectItem value="road">Road Logistics</SelectItem>
                               <SelectItem value="sea">Sea Freight</SelectItem>
@@ -196,29 +197,29 @@ export default function Contact() {
                     
                     <FormField control={form.control} name="message" render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Shipment Details / Message *</FormLabel>
+                        <FormLabel className="font-bold text-foreground">Shipment Details / Message *</FormLabel>
                         <FormControl>
-                          <Textarea placeholder="Please describe your logistics requirements..." className="h-32" {...field} />
+                          <Textarea placeholder="Please describe your logistics requirements..." className="h-32 rounded-2xl bg-slate-50 border-transparent focus-visible:ring-primary focus-visible:bg-white resize-none" {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
                     )} />
                     
                     <FormField control={form.control} name="privacy" render={({ field }) => (
-                      <FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-md p-4 bg-slate-50 border">
+                      <FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-2xl p-6 bg-background border border-border">
                         <FormControl>
-                          <Checkbox checked={field.value} onCheckedChange={field.onChange} />
+                          <Checkbox checked={field.value} onCheckedChange={field.onChange} className="mt-1" />
                         </FormControl>
                         <div className="space-y-1 leading-none">
-                          <FormLabel className="font-normal text-slate-600">
-                            I agree to the <a href="/privacy-policy" className="text-secondary hover:underline">Privacy Policy</a> and consent to BWCL contacting me regarding my inquiry.
+                          <FormLabel className="font-medium text-muted-foreground leading-relaxed">
+                            I agree to the <a href="/privacy-policy" className="text-primary font-bold hover:underline">Privacy Policy</a> and consent to BWCL contacting me regarding my inquiry.
                           </FormLabel>
                           <FormMessage />
                         </div>
                       </FormItem>
                     )} />
                     
-                    <Button type="submit" disabled={isPending} className="w-full bg-secondary hover:bg-blue-600 h-14 text-base md:text-lg rounded-xl text-white">
+                    <Button type="submit" disabled={isPending} className="w-full bg-secondary hover:bg-secondary/90 h-16 text-lg font-bold rounded-full text-white shadow-lg shadow-secondary/20 transition-transform hover:scale-105 active:scale-95">
                       {isPending ? "Submitting Request..." : "Submit Quote Request"}
                     </Button>
                   </form>

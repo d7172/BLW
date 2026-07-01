@@ -1,7 +1,7 @@
 import { SEO } from "@/seo/SEO";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Train, Truck, Ship, Plane, Warehouse, HardHat } from "lucide-react";
+import { Train, Truck, Ship, Plane, Warehouse, HardHat, ArrowRight } from "lucide-react";
 
 export default function Services() {
   const services = [
@@ -57,38 +57,40 @@ export default function Services() {
         canonical="/services"
       />
       
-      <section className="pt-32 pb-16 md:pb-20 bg-slate-50 border-b border-border">
-        <div className="container mx-auto px-4 text-center max-w-3xl">
-          <h1 className="text-4xl md:text-5xl font-bold text-[#0B1F3A] mb-4 md:mb-6">Comprehensive Logistics Solutions</h1>
-          <p className="text-lg md:text-xl text-slate-600">End-to-end multimodal supply chain capabilities designed for scale, precision, and efficiency.</p>
+      <section className="pt-40 pb-20 bg-background">
+        <div className="container mx-auto px-6 text-center max-w-4xl">
+          <h1 className="text-5xl md:text-7xl font-bold text-foreground mb-6 font-serif leading-tight">
+            Comprehensive <span className="italic text-primary font-normal">Solutions.</span>
+          </h1>
+          <p className="text-xl text-muted-foreground font-medium">End-to-end multimodal supply chain capabilities designed for scale, precision, and efficiency.</p>
         </div>
       </section>
 
-      <section className="py-16 md:py-20">
-        <div className="container mx-auto px-4 flex flex-col gap-16 md:gap-24 max-w-6xl">
+      <section className="py-20 bg-white rounded-t-[4rem] shadow-[0_-8px_30px_rgb(0,0,0,0.04)]">
+        <div className="container mx-auto px-6 flex flex-col gap-24 max-w-6xl">
           {services.map((svc, idx) => (
-            <div key={svc.id} id={svc.id} className={`flex flex-col ${idx % 2 === 1 ? 'md:flex-row-reverse' : 'md:flex-row'} gap-8 md:gap-12 items-center`}>
+            <div key={svc.id} id={svc.id} className={`flex flex-col ${idx % 2 === 1 ? 'md:flex-row-reverse' : 'md:flex-row'} gap-12 items-center`}>
               <div className="w-full md:w-1/2">
-                <div className="rounded-2xl overflow-hidden shadow-xl md:shadow-2xl">
-                  <img src={svc.img} alt={svc.title} className="w-full h-[250px] sm:h-[300px] md:h-[400px] object-cover" />
+                <div className="rounded-[3rem] overflow-hidden shadow-xl">
+                  <img src={svc.img} alt={svc.title} className="w-full h-[300px] md:h-[450px] object-cover hover:scale-105 transition-transform duration-700" />
                 </div>
               </div>
               <div className="w-full md:w-1/2">
-                <div className="inline-flex items-center justify-center h-12 w-12 rounded-xl bg-blue-100 text-secondary mb-4 md:mb-6">
-                  <svc.icon className="h-6 w-6" />
+                <div className="inline-flex items-center justify-center h-16 w-16 rounded-[1.5rem] bg-primary/10 text-primary mb-6">
+                  <svc.icon className="h-8 w-8" />
                 </div>
-                <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-3 md:mb-4">{svc.title}</h2>
-                <p className="text-base md:text-lg text-slate-600 mb-6 md:mb-8 leading-relaxed">{svc.desc}</p>
-                <ul className="space-y-2 md:space-y-3 mb-6 md:mb-8">
+                <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 font-serif">{svc.title}</h2>
+                <p className="text-lg text-muted-foreground mb-8 font-medium leading-relaxed">{svc.desc}</p>
+                <ul className="space-y-4 mb-10">
                   {['Dedicated Account Manager', 'Real-time Tracking Visibility', 'Pan-India & Global Coverage', '24/7 Control Tower Support'].map((feature, i) => (
-                    <li key={i} className="flex items-center gap-3 text-sm md:text-base text-slate-700">
-                      <div className="h-2 w-2 rounded-full bg-emerald-500 shrink-0"></div>
+                    <li key={i} className="flex items-center gap-4 text-foreground font-medium">
+                      <div className="h-3 w-3 rounded-full bg-secondary shrink-0"></div>
                       <span>{feature}</span>
                     </li>
                   ))}
                 </ul>
-                <Button asChild className="bg-[#0B1F3A] hover:bg-slate-800 text-white rounded-full w-full sm:w-auto h-12 px-6">
-                  <Link to="/contact">Get a Quote for {svc.title}</Link>
+                <Button asChild size="lg" className="bg-foreground hover:bg-foreground/90 text-white rounded-full w-full sm:w-auto h-14 px-8 text-lg font-bold">
+                  <Link to="/contact">Get a Quote <ArrowRight className="ml-2 h-5 w-5" /></Link>
                 </Button>
               </div>
             </div>

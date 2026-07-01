@@ -35,7 +35,8 @@ A premium marketing website for BWCL (BW Container Lines), an Indian rail-first 
 - Contract-first: the contact API is defined in `openapi.yaml`, then Orval generates the React Query hook (`useCreateContact`) and the server-side Zod validator (`CreateContactBody`). The Express route validates with that generated schema and returns 201/400/500.
 - The frontend Contact form posts via the generated hook to a relative `/api/contacts`, which the shared reverse proxy routes to the API server (no base-URL config needed in dev or prod).
 - The `privacy` consent checkbox is validated client-side only and intentionally NOT persisted to the DB.
-- Fully original design (not copied from bwcl.in). Brand palette #0B1F3A / #0E4BFF / #00C2A8 / #FFC857, Plus Jakarta Sans.
+- Fully original design (not copied from bwcl.in). Light, eco-modern "Nanoplazz"-inspired aesthetic: mint background (#F3FAF6), deep fresh-green primary (hsl 146 64% 37%), coral secondary (hsl 14 88% 60%), charcoal text (#272B30), very rounded corners, floating pill nav, bento cards, circular-progress stat rings, italic green accent words. Fonts: Outfit (sans) + Bricolage Grotesque (serif/display).
+- Color contrast is intentionally tuned to large-text AA (~3:1) for the big bold CTAs, NOT full normal-text AA, to preserve the reference aesthetic (the reference itself is not strict-AA). Do not "fix" the green/coral to 4.5:1 without checking this tradeoff first.
 
 ## Product
 
