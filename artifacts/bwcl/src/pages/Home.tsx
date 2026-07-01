@@ -226,7 +226,7 @@ export default function Home() {
               </h2>
               <p className="text-lg md:text-xl text-muted-foreground font-medium">End-to-end multimodal logistics designed for scale, reliability, and cost-efficiency.</p>
             </div>
-            <Button asChild size="lg" className="rounded-full bg-foreground hover:bg-foreground/90 text-white font-semibold shrink-0 h-14 px-8">
+            <Button asChild size="lg" className="rounded-full bg-primary hover:bg-primary/90 text-white font-semibold shrink-0 h-14 px-8">
               <Link to="/services">View All Services</Link>
             </Button>
           </div>
