@@ -107,17 +107,17 @@
   --sidebar: 0 0% 100%;
   --sidebar-foreground: 216 10% 17%;
   --sidebar-border: 146 20% 88%;
-  --sidebar-primary: 146 64% 37%;
+  --sidebar-primary: 146 60% 47%;
   --sidebar-primary-foreground: 0 0% 100%;
   --sidebar-accent: 146 33% 94%;
   --sidebar-accent-foreground: 216 10% 17%;
-  --sidebar-ring: 146 64% 37%;
+  --sidebar-ring: 146 60% 47%;
   
   --popover: 0 0% 100%;
   --popover-foreground: 216 10% 17%;
   --popover-border: 146 20% 88%;
   
-  --primary: 146 64% 37%; /* deeper fresh green, AA-friendly */
+  --primary: 146 60% 47%; /* lighter fresh green */
   --primary-foreground: 0 0% 100%;
   --secondary: 14 88% 60%; /* coral */
   --secondary-foreground: 0 0% 100%;
@@ -128,14 +128,14 @@
   --destructive: 0 84% 60%;
   --destructive-foreground: 0 0% 100%;
   --input: 146 20% 88%;
-  --ring: 146 64% 37%;
+  --ring: 146 60% 47%;
 
-  --primary-border: hsl(146 64% 30%);
+  --primary-border: hsl(146 60% 38%);
   --secondary-border: hsl(14 88% 50%);
   --muted-border: hsl(146 20% 85%);
   --accent-border: hsl(146 20% 85%);
   --destructive-border: hsl(0 84% 52%);
-  --sidebar-primary-border: hsl(146 64% 30%);
+  --sidebar-primary-border: hsl(146 60% 38%);
   --sidebar-accent-border: hsl(146 20% 85%);
   --button-outline: hsl(146 20% 85%);
 
