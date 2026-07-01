@@ -27,7 +27,7 @@ export default function About() {
       
       {/* Hero */}
       <section className="pt-40 pb-24 bg-background relative overflow-hidden">
-        <div className="container mx-auto px-6 text-center max-w-4xl relative z-10">
+        <div className="container mx-auto text-center max-w-4xl relative z-10">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white shadow-sm border border-border font-semibold text-sm mb-8 text-primary uppercase tracking-wider">
             <Anchor className="h-4 w-4" />
             Our Story
@@ -43,7 +43,7 @@ export default function About() {
       
       {/* Mission & Vision */}
       <section className="py-24 bg-white rounded-[4rem] shadow-sm -mt-8 relative z-10">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             <div className="bg-slate-50 p-12 rounded-[3rem] border border-slate-100 hover:shadow-xl transition-shadow duration-300">
               <Target className="h-12 w-12 text-primary mb-8" />
@@ -66,7 +66,7 @@ export default function About() {
 
       {/* Strategic Pillars */}
       <section className="py-24 bg-background">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground font-serif">Strategic <span className="italic text-primary">Pillars</span></h2>
           </div>
@@ -90,7 +90,7 @@ export default function About() {
 
       {/* Core Values (Bento) */}
       <section className="py-24 bg-slate-800 text-white rounded-[4rem] mx-4 mb-24">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto">
           <div className="text-center mb-16 max-w-3xl mx-auto">
             <h2 className="text-4xl md:text-6xl font-bold mb-6 font-serif">Core <span className="italic text-primary font-normal">Values</span></h2>
             <p className="text-slate-300 text-lg md:text-xl font-medium">The fundamental principles that guide every decision, route, and relationship at BLW.</p>
@@ -112,7 +112,7 @@ export default function About() {
 
       {/* Leadership Team */}
       <section className="py-24 bg-white">
-        <div className="container mx-auto px-6 text-center">
+        <div className="container mx-auto text-center">
           <h2 className="text-4xl md:text-6xl font-bold text-foreground mb-6 font-serif">Leadership <span className="italic text-primary font-normal">Team</span></h2>
           <p className="text-lg md:text-xl text-muted-foreground mb-16 max-w-2xl mx-auto font-medium">Guided by industry visionaries with unparalleled expertise in rail cargo and multimodal logistics.</p>
           
@@ -137,7 +137,7 @@ export default function About() {
 
       {/* Partnership Metrics / ROI */}
       <section className="py-24 bg-background" ref={statsRef}>
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto">
           <div className="text-center max-w-4xl mx-auto mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6 font-serif">Why <span className="italic text-primary font-normal">Choose Us</span></h2>
             <p className="text-lg md:text-xl text-muted-foreground font-medium">

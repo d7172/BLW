@@ -5,7 +5,7 @@ import logo from "@assets/blw-logo.png";
 export default function Footer() {
   return (
     <footer className="bg-slate-100 pt-20 pb-24 md:pb-12 mt-20 rounded-t-[3rem] md:rounded-t-[4rem]">
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
 
           <div>

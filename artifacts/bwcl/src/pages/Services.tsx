@@ -58,7 +58,7 @@ export default function Services() {
       />
       
       <section className="pt-40 pb-20 bg-background">
-        <div className="container mx-auto px-6 text-center max-w-4xl">
+        <div className="container mx-auto text-center max-w-4xl">
           <h1 className="text-5xl md:text-7xl font-bold text-foreground mb-6 font-serif leading-tight">
             Comprehensive <span className="italic text-primary font-normal">Solutions.</span>
           </h1>
@@ -67,7 +67,7 @@ export default function Services() {
       </section>
 
       <section className="py-20 bg-white rounded-t-[4rem] shadow-[0_-8px_30px_rgb(0,0,0,0.04)]">
-        <div className="container mx-auto px-6 flex flex-col gap-24 max-w-6xl">
+        <div className="container mx-auto flex flex-col gap-24 max-w-6xl">
           {services.map((svc, idx) => (
             <div key={svc.id} id={svc.id} className={`flex flex-col ${idx % 2 === 1 ? 'md:flex-row-reverse' : 'md:flex-row'} gap-12 items-center`}>
               <div className="w-full md:w-1/2">

@@ -44,7 +44,7 @@ export default function Home() {
         <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-primary/10 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/3"></div>
         <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-secondary/10 rounded-full blur-[80px] translate-y-1/2 -translate-x-1/4"></div>
         
-        <div className="container mx-auto px-4 relative z-10 grid lg:grid-cols-12 gap-12 items-center">
+        <div className="container mx-auto relative z-10 grid lg:grid-cols-12 gap-12 items-center">
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
             animate={heroInView ? { opacity: 1, y: 0 } : {}}
@@ -147,7 +147,7 @@ export default function Home() {
 
       {/* 3. Strategy Pillars */}
       <section className="py-24 bg-background">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto">
           <div className="max-w-3xl mb-16">
             <h2 className="text-4xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
               Enterprise strategy engineered for <span className="font-serif italic text-primary font-normal">scale.</span>
@@ -185,7 +185,7 @@ export default function Home() {
 
       {/* 4. Services Overview */}
       <section className="py-24 bg-white rounded-[3rem] shadow-sm -mt-8 relative z-10">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
             <div className="max-w-2xl">
               <h2 className="text-4xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
@@ -227,7 +227,7 @@ export default function Home() {
 
       {/* 5. Why Partner With BWCL (Bento Grid) */}
       <section className="py-24 bg-background">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-4xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
               Why Partner With <span className="font-serif italic text-primary font-normal">BLW</span>
@@ -273,7 +273,7 @@ export default function Home() {
 
       {/* 6. Industries We Power */}
       <section className="py-24 bg-background">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-4xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
               Industries We <span className="font-serif italic text-primary font-normal">Power</span>
@@ -302,7 +302,7 @@ export default function Home() {
 
       {/* 7. Stats Rings */}
       <section className="py-24 bg-white" ref={statsRef}>
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 md:gap-12">
             {[
               { val: 95, max: 100, suffix: "%", label: "Same-Day Delivery", color: "text-primary", ring: "stroke-primary" },
@@ -339,7 +339,7 @@ export default function Home() {
       
       {/* CTA */}
       <section className="py-24 bg-primary text-white text-center">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-8 font-serif">Ready to move forward?</h2>
           <Button asChild size="lg" className="rounded-full bg-white text-primary hover:bg-slate-50 h-16 px-10 text-xl font-bold shadow-xl transition-transform hover:scale-105">
             <Link to="/contact">Partner With Us</Link>

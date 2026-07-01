@@ -77,14 +77,14 @@ export default function Contact() {
       />
       
       <section className="pt-40 pb-20 bg-background">
-        <div className="container mx-auto px-6 text-center">
+        <div className="container mx-auto text-center">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 font-serif text-foreground">Let's <span className="italic text-primary font-normal">Connect</span></h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto font-medium">Collaborating to move India forward. Partner with us to scale your logistics operations.</p>
         </div>
       </section>
 
       <section className="py-20 bg-white rounded-t-[4rem] shadow-[0_-8px_30px_rgb(0,0,0,0.04)]">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 max-w-6xl mx-auto">
             <div className="lg:col-span-5 space-y-8">
               <div className="bg-background p-10 rounded-[2.5rem] shadow-sm border border-border">
