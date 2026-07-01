@@ -10,7 +10,7 @@ export default function Footer() {
 
           <div>
             <Link to="/" className="inline-block mb-8">
-              <img src={logo} alt="BLW" className="h-12 w-auto" />
+              <img src={logo} alt="BLW" className="h-16 w-auto" />
             </Link>
             <p className="text-slate-500 mb-8 max-w-sm text-base font-medium leading-relaxed">
               Empowering Multimodal Logistics with a Railway-First Strategy. Moving India's freight forward.

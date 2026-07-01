@@ -37,7 +37,7 @@ export default function Navbar() {
 
         {/* Logo */}
         <Link to="/" className="flex-shrink-0 flex items-center">
-          <img src={logo} alt="BLW Logo" className="h-14 w-auto object-contain" />
+          <img src={logo} alt="BLW Logo" className="h-16 w-auto object-contain" />
         </Link>
 
         {/* Desktop: centered nav pill */}
