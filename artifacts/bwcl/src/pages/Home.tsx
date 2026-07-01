@@ -238,14 +238,14 @@ export default function Home() {
               { title: "Road Logistics", icon: Truck, desc: "Pan-India ground coverage with LTL, FTL, PTL, and ODC movements, plus superfast cargo services with a fleet of 100+ owned trucks." },
               { title: "Air Logistics", icon: Plane, desc: "Strategic partnerships with major airlines and a broad network of airport facilities worldwide for unparalleled global reach." }
             ].map((service, i) => (
-              <Link to="/services" key={i} className="group bg-emerald-50 rounded-[2.5rem] p-10 flex flex-col justify-between hover:-translate-y-1 transition-all duration-300 shadow-sm border border-emerald-100 min-h-[260px]">
-                <div className="h-16 w-16 rounded-[1.25rem] bg-emerald-100 flex items-center justify-center mb-8 group-hover:bg-emerald-200 transition-colors">
-                  <service.icon className="h-8 w-8 text-emerald-600" />
+              <Link to="/services" key={i} className="group bg-white rounded-[2.5rem] p-10 flex flex-col justify-between hover:-translate-y-1 transition-all duration-300 shadow-sm border border-emerald-100/70 min-h-[260px]">
+                <div className="h-16 w-16 rounded-[1.25rem] bg-emerald-50 flex items-center justify-center mb-8 group-hover:bg-emerald-100 transition-colors">
+                  <service.icon className="h-8 w-8 text-emerald-500" />
                 </div>
                 <div>
-                  <h3 className="text-2xl md:text-3xl font-bold mb-3 font-serif text-emerald-950">{service.title}</h3>
-                  <p className="text-emerald-800 font-medium leading-relaxed mb-6">{service.desc}</p>
-                  <div className="inline-flex items-center text-emerald-700 font-bold text-sm group-hover:gap-2 transition-all">
+                  <h3 className="text-2xl md:text-3xl font-bold mb-3 font-serif text-foreground">{service.title}</h3>
+                  <p className="text-muted-foreground font-medium leading-relaxed mb-6">{service.desc}</p>
+                  <div className="inline-flex items-center text-primary font-bold text-sm group-hover:gap-2 transition-all">
                     Learn More <ArrowRight className="ml-1.5 h-4 w-4" />
                   </div>
                 </div>
