@@ -44,6 +44,104 @@ export default function Home() {
         <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-primary/10 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/3"></div>
         <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-secondary/10 rounded-full blur-[80px] translate-y-1/2 -translate-x-1/4"></div>
 
+        {/* World map — very faint outline + trade-route dots */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none select-none flex items-center justify-center">
+          <svg
+            viewBox="0 0 1000 500"
+            preserveAspectRatio="xMidYMid meet"
+            className="w-full max-w-5xl opacity-100"
+          >
+            {/* ── Continent fills (stroke only, hairline) ── */}
+            <g fill="hsl(146,60%,47%)" fillOpacity="0.025"
+               stroke="hsl(146,60%,47%)" strokeOpacity="0.055" strokeWidth="0.6" strokeLinejoin="round">
+              {/* North America */}
+              <path d="M128,52 L178,42 L224,48 L252,68 L278,94 L286,138 L280,178 L264,210 L240,238 L214,268 L194,294 L172,300 L152,284 L132,258 L112,228 L98,194 L84,162 L88,128 L100,98 L116,72 Z"/>
+              {/* Greenland */}
+              <path d="M198,18 L228,12 L260,18 L270,33 L254,48 L224,54 L198,46 L188,30 Z"/>
+              {/* Central America stub */}
+              <path d="M194,294 L206,310 L200,322 L188,316 L186,300 Z"/>
+              {/* South America */}
+              <path d="M198,326 L230,310 L256,316 L268,342 L268,378 L260,414 L244,446 L220,458 L194,450 L172,428 L166,398 L166,362 L174,334 Z"/>
+              {/* Iceland */}
+              <path d="M390,44 L408,40 L416,50 L408,60 L390,56 Z"/>
+              {/* UK + Ireland */}
+              <path d="M412,78 L428,72 L436,86 L428,96 L412,90 Z"/>
+              {/* Scandinavia */}
+              <path d="M452,36 L474,32 L496,40 L498,64 L478,68 L452,58 Z"/>
+              {/* Europe */}
+              <path d="M432,74 L464,62 L502,66 L528,78 L536,110 L526,140 L510,158 L488,164 L464,160 L442,146 L430,122 L428,98 Z"/>
+              {/* Africa */}
+              <path d="M412,174 L444,162 L478,166 L508,178 L528,198 L538,240 L540,294 L530,348 L510,394 L482,420 L450,430 L420,424 L398,400 L388,358 L386,304 L392,248 L400,204 Z"/>
+              {/* Madagascar */}
+              <path d="M548,326 L558,316 L566,330 L562,354 L552,364 L544,350 Z"/>
+              {/* Asia (main landmass) */}
+              <path d="M534,52 L592,42 L652,40 L720,46 L782,56 L842,74 L870,110 L872,148 L854,184 L820,214 L780,234 L740,246 L694,250 L654,240 L614,226 L576,204 L550,176 L536,148 L532,112 Z"/>
+              {/* Arabian Peninsula */}
+              <path d="M528,198 L548,190 L562,200 L558,228 L544,244 L528,238 Z"/>
+              {/* Indian subcontinent */}
+              <path d="M618,218 L640,224 L652,244 L646,280 L630,306 L612,308 L596,290 L592,258 L600,230 Z"/>
+              {/* Indochina / SE Asia */}
+              <path d="M744,246 L776,250 L802,264 L810,284 L796,298 L764,292 L744,274 Z"/>
+              {/* Japan */}
+              <path d="M848,116 L858,110 L866,124 L860,140 L848,142 L842,128 Z"/>
+              {/* Australia */}
+              <path d="M714,324 L760,310 L808,316 L840,338 L850,372 L840,408 L808,428 L768,434 L730,428 L704,408 L694,376 L698,344 Z"/>
+              {/* New Zealand */}
+              <path d="M866,386 L874,376 L882,384 L878,402 L866,406 Z"/>
+            </g>
+
+            {/* ── Invisible trade-route paths (used by dots) ── */}
+            {/* Route 1  Shanghai → Rotterdam */}
+            {/* Route 2  Mumbai → London */}
+            {/* Route 3  New York → London */}
+            {/* Route 4  LA → Tokyo (Pacific arc) */}
+            {/* Route 5  Sydney → Singapore */}
+            {/* Route 6  Dubai → Shanghai */}
+
+            {/* ── Animated dots ── */}
+            {/* Dot A: Shanghai → Rotterdam (green) */}
+            <circle r="2.8" fill="hsl(146,60%,47%)" opacity="0.32">
+              <animateMotion dur="13s" repeatCount="indefinite"
+                path="M 800,185 Q 660,75 530,105 Q 478,118 462,128"/>
+            </circle>
+
+            {/* Dot B: Mumbai → London (green, offset start) */}
+            <circle r="2.2" fill="hsl(146,60%,47%)" opacity="0.28">
+              <animateMotion dur="10s" repeatCount="indefinite" begin="4s"
+                path="M 624,268 Q 560,215 500,178 Q 466,154 444,136"/>
+            </circle>
+
+            {/* Dot C: New York → London (coral) */}
+            <circle r="2.4" fill="hsl(14,88%,60%)" opacity="0.28">
+              <animateMotion dur="9s" repeatCount="indefinite" begin="1.5s"
+                path="M 208,163 Q 318,118 444,136"/>
+            </circle>
+
+            {/* Dot D: LA → Tokyo via Pacific (coral, long arc) */}
+            <circle r="2.6" fill="hsl(14,88%,60%)" opacity="0.25">
+              <animateMotion dur="16s" repeatCount="indefinite" begin="6s"
+                path="M 96,178 Q 0,80 850,128"/>
+            </circle>
+
+            {/* Dot E: Sydney → Singapore (green) */}
+            <circle r="2" fill="hsl(146,60%,47%)" opacity="0.26">
+              <animateMotion dur="8s" repeatCount="indefinite" begin="2s"
+                path="M 758,378 Q 772,306 790,268"/>
+            </circle>
+
+            {/* Dot F: Dubai → Shanghai (coral) */}
+            <circle r="2.2" fill="hsl(14,88%,60%)" opacity="0.26">
+              <animateMotion dur="11s" repeatCount="indefinite" begin="7s"
+                path="M 554,215 Q 660,160 800,185"/>
+            </circle>
+
+            {/* Dot G: Rotterdam → New York (return, green) */}
+            <circle r="2" fill="hsl(146,60%,47%)" opacity="0.22">
+              <animateMotion dur="10s" repeatCount="indefinite" begin="9s"
+                path="M 462,128 Q 330,140 208,163"/>
+            </circle>
+          </svg>
+        </div>
 
         <div className="container mx-auto relative z-10 grid lg:grid-cols-12 gap-12 items-center">
           <motion.div 
