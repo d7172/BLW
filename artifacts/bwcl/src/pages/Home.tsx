@@ -60,8 +60,8 @@ export default function Home() {
               stroke="hsl(14,88%,60%)" strokeWidth="1.8" strokeDasharray="10 12" opacity="0.11" fill="none"
               style={{ animation: 'route-dash 9s linear infinite 1s' }}/>
 
-            {/* Route C — Air lane: gentle upper arc, left → right */}
-            <path d="M-30,110 Q360,55 720,78 Q1090,104 1490,52"
+            {/* Route C — Air lane: gentle arc, left → right, below navbar */}
+            <path d="M-30,175 Q360,130 720,152 Q1090,172 1490,125"
               stroke="hsl(146,60%,47%)" strokeWidth="1.2" strokeDasharray="5 16" opacity="0.09" fill="none"
               style={{ animation: 'route-dash 10s linear infinite 2s' }}/>
 
@@ -92,8 +92,8 @@ export default function Home() {
             <circle cx="0"    cy="310" r="7" fill="hsl(14,88%,60%)"  opacity="0.20"/>
             <circle cx="820"  cy="555" r="5" fill="hsl(14,88%,60%)"  opacity="0.13"/>
             {/* Route C terminals */}
-            <circle cx="0"    cy="110" r="6" fill="hsl(146,60%,47%)" opacity="0.17"/>
-            <circle cx="1440" cy="52"  r="6" fill="hsl(146,60%,47%)" opacity="0.15"/>
+            <circle cx="0"    cy="175" r="6" fill="hsl(146,60%,47%)" opacity="0.17"/>
+            <circle cx="1440" cy="125" r="6" fill="hsl(146,60%,47%)" opacity="0.15"/>
             {/* Intersection crosshair dots */}
             <circle cx="620"  cy="450" r="4" fill="hsl(146,60%,47%)" opacity="0.10"/>
             <circle cx="720"  cy="455" r="4" fill="hsl(14,88%,60%)"  opacity="0.10"/>
@@ -128,8 +128,8 @@ export default function Home() {
             </g>
 
             {/* ─── SHIP (Route B, RTL) ─────────────────────────── */}
-            <g opacity="0.22">
-              <animateMotion dur="32s" repeatCount="indefinite" begin="6s" rotate="auto"
+            <g opacity="0.22" transform="scale(-1,1)">
+              <animateMotion dur="32s" repeatCount="indefinite" begin="6s" rotate="0"
                 path="M1490,820 Q1120,660 820,555 Q520,450 -30,310"/>
               {/* Hull bottom */}
               <path d="M-38,5 L38,5 L30,18 Q0,24 -30,18 Z" fill="hsl(14,88%,60%)"/>
@@ -154,9 +154,9 @@ export default function Home() {
             </g>
 
             {/* ─── PLANE (Route C, LTR top-down view) ─────────── */}
-            <g opacity="0.22">
-              <animateMotion dur="19s" repeatCount="indefinite" begin="2s" rotate="auto"
-                path="M-30,110 Q360,55 720,78 Q1090,104 1490,52"/>
+            <g opacity="0.24">
+              <animateMotion dur="19s" repeatCount="indefinite" rotate="auto"
+                path="M-30,175 Q360,130 720,152 Q1090,172 1490,125"/>
               {/* Fuselage */}
               <ellipse cx="2" cy="0" rx="22" ry="6" fill="hsl(146,60%,47%)"/>
               {/* Nose cone */}
