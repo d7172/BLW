@@ -68,10 +68,6 @@ export default function Home() {
             <circle cx="1350" cy="180" r="5"  fill="hsl(146,60%,47%)" opacity="0.12" />
             <circle cx="560"  cy="295" r="4"  fill="hsl(146,60%,47%)" opacity="0.1"  />
             <circle cx="725"  cy="490" r="5"  fill="hsl(14,88%,60%)"  opacity="0.1"  />
-            {/* Pulsing rings */}
-            <circle cx="600"  cy="350" r="14" fill="none" stroke="hsl(146,60%,47%)" strokeWidth="1.5" opacity="0.1"  style={{ animation: 'pulse-dot 3.5s ease-in-out infinite' }} />
-            <circle cx="1350" cy="180" r="11" fill="none" stroke="hsl(146,60%,47%)" strokeWidth="1"   opacity="0.08" style={{ animation: 'pulse-dot 3.5s ease-in-out infinite 1.8s' }} />
-            <circle cx="725"  cy="490" r="11" fill="none" stroke="hsl(14,88%,60%)"  strokeWidth="1"   opacity="0.07" style={{ animation: 'pulse-dot 3.5s ease-in-out infinite 0.9s' }} />
           </svg>
         </div>
 

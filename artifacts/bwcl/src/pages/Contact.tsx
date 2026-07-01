@@ -76,8 +76,35 @@ export default function Contact() {
         canonical="/contact"
       />
       
-      <section className="pt-40 pb-20 bg-background">
-        <div className="container mx-auto text-center">
+      <section className="pt-40 pb-20 bg-background relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/10 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/3"></div>
+        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-secondary/10 rounded-full blur-[80px] translate-y-1/2 -translate-x-1/4"></div>
+
+        {/* Animated logistics background */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none select-none">
+          <Globe2   style={{ opacity: 0.05, animation: 'float-slow 12s ease-in-out infinite' }}          className="absolute top-[18%] left-[6%] h-16 w-16 text-primary" />
+          <Network  style={{ opacity: 0.05, animation: 'drift-x 11s ease-in-out infinite 0.5s' }}        className="absolute top-[20%] right-[8%] h-14 w-14 text-primary" />
+          <Train    style={{ opacity: 0.06, animation: 'float-medium 9s ease-in-out infinite 1s' }}      className="absolute bottom-[30%] left-[8%] h-14 w-14 text-primary" />
+          <Ship     style={{ opacity: 0.05, animation: 'float-slow 10s ease-in-out infinite 2s' }}       className="absolute bottom-[18%] right-[10%] h-16 w-16 text-primary" />
+          <MapPin   style={{ opacity: 0.06, animation: 'float-medium 8s ease-in-out infinite 3s' }}      className="absolute top-[48%] left-[20%] h-10 w-10 text-secondary" />
+          <Plane    style={{ opacity: 0.05, animation: 'drift-x 13s ease-in-out infinite 2.5s' }}        className="absolute top-[12%] right-[34%] h-11 w-11 text-primary" />
+          <Truck    style={{ opacity: 0.05, animation: 'float-slow 11s ease-in-out infinite 4s' }}       className="absolute bottom-[42%] left-[32%] h-12 w-12 text-primary" />
+          <Warehouse style={{ opacity: 0.04, animation: 'drift-x 14s ease-in-out infinite 1.5s' }}       className="absolute top-[60%] right-[28%] h-12 w-12 text-primary" />
+          <Package  style={{ opacity: 0.06, animation: 'float-medium 7s ease-in-out infinite 0.8s' }}    className="absolute top-[35%] right-[22%] h-10 w-10 text-primary" />
+          <Zap      style={{ opacity: 0.05, animation: 'float-slow 9s ease-in-out infinite 3.5s' }}      className="absolute bottom-[25%] right-[38%] h-9 w-9 text-secondary" />
+
+          <svg className="absolute inset-0 w-full h-full" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" fill="none">
+            <path d="M90,680 Q320,430 610,355 Q910,285 1370,165" stroke="hsl(146,60%,47%)" strokeWidth="1.5" strokeDasharray="8 14" opacity="0.1" style={{ animation: 'route-dash 8s linear infinite' }} />
+            <path d="M40,500 Q240,330 550,292 Q860,258 1310,138" stroke="hsl(146,60%,47%)" strokeWidth="1" strokeDasharray="5 16" opacity="0.07" style={{ animation: 'route-dash 10s linear infinite 2.5s' }} />
+            <path d="M190,810 Q480,600 715,488 Q958,378 1395,272" stroke="hsl(14,88%,60%)" strokeWidth="1.5" strokeDasharray="10 12" opacity="0.06" style={{ animation: 'route-dash 9s linear infinite 1s' }} />
+            <circle cx="90"   cy="680" r="5"  fill="hsl(146,60%,47%)" opacity="0.14" />
+            <circle cx="610"  cy="355" r="6"  fill="hsl(146,60%,47%)" opacity="0.12" />
+            <circle cx="1370" cy="165" r="5"  fill="hsl(146,60%,47%)" opacity="0.12" />
+            <circle cx="715"  cy="488" r="5"  fill="hsl(14,88%,60%)"  opacity="0.1"  />
+          </svg>
+        </div>
+
+        <div className="container mx-auto text-center relative z-10">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 font-serif text-foreground">Let's <span className="italic text-primary font-normal">Connect</span></h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto font-medium">Collaborating to move India forward. Partner with us to scale your logistics operations.</p>
         </div>

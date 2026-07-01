@@ -49,9 +49,6 @@ export default function About() {
             <circle cx="650"  cy="310" r="6"  fill="hsl(146,60%,47%)" opacity="0.12" />
             <circle cx="1380" cy="160" r="5"  fill="hsl(146,60%,47%)" opacity="0.12" />
             <circle cx="700"  cy="460" r="5"  fill="hsl(14,88%,60%)"  opacity="0.1"  />
-            <circle cx="650"  cy="310" r="14" fill="none" stroke="hsl(146,60%,47%)" strokeWidth="1.5" opacity="0.1"  style={{ animation: 'pulse-dot 3.5s ease-in-out infinite' }} />
-            <circle cx="1380" cy="160" r="11" fill="none" stroke="hsl(146,60%,47%)" strokeWidth="1"   opacity="0.08" style={{ animation: 'pulse-dot 3.5s ease-in-out infinite 2s' }} />
-            <circle cx="700"  cy="460" r="11" fill="none" stroke="hsl(14,88%,60%)"  strokeWidth="1"   opacity="0.07" style={{ animation: 'pulse-dot 3.5s ease-in-out infinite 1s' }} />
           </svg>
         </div>
 
