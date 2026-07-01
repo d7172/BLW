@@ -44,69 +44,141 @@ export default function Home() {
         <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-primary/10 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/3"></div>
         <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-secondary/10 rounded-full blur-[80px] translate-y-1/2 -translate-x-1/4"></div>
 
-        {/* Route paths + vehicles traversing A → B */}
+        {/* Route network + A→B vehicles */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none select-none">
           <svg className="absolute inset-0 w-full h-full" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice">
-            {/* Route 1 — Train track: bottom-left → upper-right */}
-            <path d="M-30,740 Q300,430 620,355 Q900,278 1480,140"
-              stroke="hsl(146,60%,47%)" strokeWidth="1.5" strokeDasharray="8 14" opacity="0.12" fill="none"
+
+            {/* ─── ROUTE LINES ─────────────────────────────────── */}
+
+            {/* Route A — Train track: bottom-left → upper-right */}
+            <path d="M-30,750 Q280,480 600,370 Q900,265 1490,135"
+              stroke="hsl(146,60%,47%)" strokeWidth="1.8" strokeDasharray="8 14" opacity="0.14" fill="none"
               style={{ animation: 'route-dash 7s linear infinite' }}/>
 
-            {/* Route 2 — Ship lane: upper-right → lower-left (RTL) */}
-            <path d="M1480,820 Q1100,640 800,545 Q500,445 -30,325"
-              stroke="hsl(14,88%,60%)" strokeWidth="1.5" strokeDasharray="10 12" opacity="0.09" fill="none"
+            {/* Route B — Ship lane: lower-right → upper-left */}
+            <path d="M1490,820 Q1120,660 820,555 Q520,450 -30,310"
+              stroke="hsl(14,88%,60%)" strokeWidth="1.8" strokeDasharray="10 12" opacity="0.11" fill="none"
               style={{ animation: 'route-dash 9s linear infinite 1s' }}/>
 
-            {/* Route 3 — Air lane: gentle arc top left → top right */}
-            <path d="M-30,105 Q360,58 720,82 Q1080,108 1480,58"
-              stroke="hsl(146,60%,47%)" strokeWidth="1" strokeDasharray="5 16" opacity="0.07" fill="none"
+            {/* Route C — Air lane: gentle upper arc, left → right */}
+            <path d="M-30,110 Q360,55 720,78 Q1090,104 1490,52"
+              stroke="hsl(146,60%,47%)" strokeWidth="1.2" strokeDasharray="5 16" opacity="0.09" fill="none"
               style={{ animation: 'route-dash 10s linear infinite 2s' }}/>
 
-            {/* Origin / destination nodes */}
-            <circle cx="0"    cy="740" r="6" fill="hsl(146,60%,47%)" opacity="0.20"/>
-            <circle cx="1440" cy="140" r="6" fill="hsl(146,60%,47%)" opacity="0.18"/>
-            <circle cx="1440" cy="820" r="6" fill="hsl(14,88%,60%)"  opacity="0.20"/>
-            <circle cx="0"    cy="325" r="6" fill="hsl(14,88%,60%)"  opacity="0.18"/>
-            <circle cx="0"    cy="105" r="5" fill="hsl(146,60%,47%)" opacity="0.15"/>
-            <circle cx="1440" cy="58"  r="5" fill="hsl(146,60%,47%)" opacity="0.13"/>
+            {/* Route D — Secondary: upper-left → lower-right crossing */}
+            <path d="M-30,180 Q300,320 620,450 Q940,575 1490,720"
+              stroke="hsl(146,60%,47%)" strokeWidth="1" strokeDasharray="6 18" opacity="0.06" fill="none"
+              style={{ animation: 'route-dash 12s linear infinite 3s' }}/>
 
-            {/* ── Train (follows route 1) ── */}
+            {/* Route E — Secondary: roughly horizontal mid-screen */}
+            <path d="M-30,480 Q360,440 720,455 Q1080,470 1490,440"
+              stroke="hsl(14,88%,60%)" strokeWidth="1" strokeDasharray="6 18" opacity="0.06" fill="none"
+              style={{ animation: 'route-dash 11s linear infinite 4s' }}/>
+
+            {/* Route F — Secondary: lower arc right-to-left */}
+            <path d="M1490,640 Q1100,590 720,605 Q340,620 -30,580"
+              stroke="hsl(146,60%,47%)" strokeWidth="1" strokeDasharray="5 20" opacity="0.05" fill="none"
+              style={{ animation: 'route-dash 13s linear infinite 2s' }}/>
+
+            {/* ─── TERMINAL / HUB NODES ────────────────────────── */}
+            {/* Route A terminals */}
+            <circle cx="0"    cy="750" r="7" fill="hsl(146,60%,47%)" opacity="0.22"/>
+            <circle cx="1440" cy="135" r="7" fill="hsl(146,60%,47%)" opacity="0.20"/>
+            {/* Mid-hubs on Route A */}
+            <circle cx="600"  cy="370" r="5" fill="hsl(146,60%,47%)" opacity="0.14"/>
+            <circle cx="900"  cy="265" r="4" fill="hsl(146,60%,47%)" opacity="0.11"/>
+            {/* Route B terminals */}
+            <circle cx="1440" cy="820" r="7" fill="hsl(14,88%,60%)"  opacity="0.22"/>
+            <circle cx="0"    cy="310" r="7" fill="hsl(14,88%,60%)"  opacity="0.20"/>
+            <circle cx="820"  cy="555" r="5" fill="hsl(14,88%,60%)"  opacity="0.13"/>
+            {/* Route C terminals */}
+            <circle cx="0"    cy="110" r="6" fill="hsl(146,60%,47%)" opacity="0.17"/>
+            <circle cx="1440" cy="52"  r="6" fill="hsl(146,60%,47%)" opacity="0.15"/>
+            {/* Intersection crosshair dots */}
+            <circle cx="620"  cy="450" r="4" fill="hsl(146,60%,47%)" opacity="0.10"/>
+            <circle cx="720"  cy="455" r="4" fill="hsl(14,88%,60%)"  opacity="0.10"/>
+
+            {/* ─── TRAIN (Route A, LTR) ────────────────────────── */}
+            <g opacity="0.24">
+              <animateMotion dur="24s" repeatCount="indefinite" rotate="auto"
+                path="M-30,750 Q280,480 600,370 Q900,265 1490,135"/>
+              {/* Coaches / body */}
+              <rect x="-34" y="-10" width="68" height="19" rx="6" fill="hsl(146,60%,47%)"/>
+              {/* Roof strip */}
+              <rect x="-30" y="-15" width="60" height="6" rx="3" fill="hsl(146,60%,47%)" opacity="0.75"/>
+              {/* Locomotive nose (right = direction of travel) */}
+              <path d="M34,-10 Q44,-10 44,0 Q44,9 34,9 Z" fill="hsl(146,60%,47%)"/>
+              {/* Cab window */}
+              <rect x="26" y="-8" width="8" height="6" rx="1" fill="white" opacity="0.40"/>
+              {/* Coach windows */}
+              <rect x="-28" y="-8" width="9" height="6" rx="1" fill="white" opacity="0.32"/>
+              <rect x="-15" y="-8" width="9" height="6" rx="1" fill="white" opacity="0.32"/>
+              <rect x="-2"  y="-8" width="9" height="6" rx="1" fill="white" opacity="0.32"/>
+              <rect x="11"  y="-8" width="9" height="6" rx="1" fill="white" opacity="0.32"/>
+              {/* Wheels */}
+              <circle cx="-24" cy="9"  r="7" fill="hsl(146,60%,47%)"/>
+              <circle cx="-10" cy="9"  r="7" fill="hsl(146,60%,47%)"/>
+              <circle cx="6"   cy="9"  r="7" fill="hsl(146,60%,47%)"/>
+              <circle cx="22"  cy="9"  r="7" fill="hsl(146,60%,47%)"/>
+              {/* Wheel centres */}
+              <circle cx="-24" cy="9"  r="2.5" fill="white" opacity="0.35"/>
+              <circle cx="-10" cy="9"  r="2.5" fill="white" opacity="0.35"/>
+              <circle cx="6"   cy="9"  r="2.5" fill="white" opacity="0.35"/>
+              <circle cx="22"  cy="9"  r="2.5" fill="white" opacity="0.35"/>
+            </g>
+
+            {/* ─── SHIP (Route B, RTL) ─────────────────────────── */}
             <g opacity="0.22">
-              <animateMotion dur="22s" repeatCount="indefinite" rotate="auto"
-                path="M-30,740 Q300,430 620,355 Q900,278 1480,140"/>
-              {/* body */}
-              <rect x="-24" y="-8" width="48" height="16" rx="5" fill="hsl(146,60%,47%)"/>
-              {/* cab */}
-              <rect x="-20" y="-16" width="22" height="10" rx="2" fill="hsl(146,60%,47%)"/>
-              {/* wheels */}
-              <circle cx="-14" cy="8" r="5" fill="hsl(146,60%,47%)"/>
-              <circle cx="0"   cy="8" r="5" fill="hsl(146,60%,47%)"/>
-              <circle cx="14"  cy="8" r="5" fill="hsl(146,60%,47%)"/>
+              <animateMotion dur="32s" repeatCount="indefinite" begin="6s" rotate="auto"
+                path="M1490,820 Q1120,660 820,555 Q520,450 -30,310"/>
+              {/* Hull bottom */}
+              <path d="M-38,5 L38,5 L30,18 Q0,24 -30,18 Z" fill="hsl(14,88%,60%)"/>
+              {/* Main deck */}
+              <rect x="-34" y="-3" width="68" height="9" rx="3" fill="hsl(14,88%,60%)"/>
+              {/* Stern railing */}
+              <rect x="-34" y="-6" width="8" height="4" rx="1" fill="hsl(14,88%,60%)" opacity="0.7"/>
+              {/* Bridge/superstructure */}
+              <rect x="-6"  y="-24" width="26" height="22" rx="4" fill="hsl(14,88%,60%)"/>
+              {/* Bridge windows */}
+              <rect x="-2"  y="-21" width="5" height="4" rx="1" fill="white" opacity="0.38"/>
+              <rect x="6"   y="-21" width="5" height="4" rx="1" fill="white" opacity="0.38"/>
+              <rect x="14"  y="-21" width="5" height="4" rx="1" fill="white" opacity="0.38"/>
+              {/* Funnel */}
+              <rect x="12"  y="-34" width="9" height="13" rx="3" fill="hsl(14,88%,60%)"/>
+              {/* Funnel top ring */}
+              <rect x="11"  y="-36" width="11" height="4" rx="2" fill="hsl(14,88%,60%)" opacity="0.8"/>
+              {/* Forward mast */}
+              <rect x="26"  y="-30" width="3" height="28" rx="1" fill="hsl(14,88%,60%)" opacity="0.6"/>
+              {/* Bow (right side) */}
+              <path d="M38,5 Q46,9 38,18" stroke="hsl(14,88%,60%)" strokeWidth="2" fill="none" opacity="0.5"/>
             </g>
 
-            {/* ── Ship (follows route 2, RTL) ── */}
-            <g opacity="0.20">
-              <animateMotion dur="30s" repeatCount="indefinite" begin="6s" rotate="auto"
-                path="M1480,820 Q1100,640 800,545 Q500,445 -30,325"/>
-              {/* hull */}
-              <path d="M-22,0 L22,0 L16,12 Q0,16 -16,12 Z" fill="hsl(14,88%,60%)"/>
-              {/* superstructure */}
-              <rect x="-8" y="-16" width="18" height="16" rx="2" fill="hsl(14,88%,60%)"/>
-              {/* funnel */}
-              <rect x="4" y="-22" width="6" height="8" rx="1" fill="hsl(14,88%,60%)"/>
+            {/* ─── PLANE (Route C, LTR top-down view) ─────────── */}
+            <g opacity="0.22">
+              <animateMotion dur="19s" repeatCount="indefinite" begin="2s" rotate="auto"
+                path="M-30,110 Q360,55 720,78 Q1090,104 1490,52"/>
+              {/* Fuselage */}
+              <ellipse cx="2" cy="0" rx="22" ry="6" fill="hsl(146,60%,47%)"/>
+              {/* Nose cone */}
+              <ellipse cx="22" cy="0" rx="6" ry="4" fill="hsl(146,60%,47%)" opacity="0.9"/>
+              {/* Tail cone */}
+              <ellipse cx="-20" cy="0" rx="5" ry="3.5" fill="hsl(146,60%,47%)" opacity="0.8"/>
+              {/* Left main wing (swept back) */}
+              <path d="M4,5 L-8,5 L-20,26 L-25,26 L-13,5 Z" fill="hsl(146,60%,47%)"/>
+              {/* Right main wing */}
+              <path d="M4,-5 L-8,-5 L-20,-26 L-25,-26 L-13,-5 Z" fill="hsl(146,60%,47%)"/>
+              {/* Left tail fin */}
+              <path d="M-17,3 L-23,3 L-23,13 L-17,4 Z" fill="hsl(146,60%,47%)" opacity="0.75"/>
+              {/* Right tail fin */}
+              <path d="M-17,-3 L-23,-3 L-23,-13 L-17,-4 Z" fill="hsl(146,60%,47%)" opacity="0.75"/>
+              {/* Left engine pod */}
+              <ellipse cx="-4" cy="14" rx="7" ry="2.5" fill="hsl(146,60%,47%)" opacity="0.65"/>
+              {/* Right engine pod */}
+              <ellipse cx="-4" cy="-14" rx="7" ry="2.5" fill="hsl(146,60%,47%)" opacity="0.65"/>
+              {/* Cockpit window */}
+              <ellipse cx="16" cy="0" rx="4" ry="2.5" fill="white" opacity="0.30"/>
             </g>
 
-            {/* ── Plane (follows route 3) ── */}
-            <g opacity="0.20">
-              <animateMotion dur="18s" repeatCount="indefinite" begin="2s" rotate="auto"
-                path="M-30,105 Q360,58 720,82 Q1080,108 1480,58"/>
-              {/* fuselage */}
-              <ellipse cx="0" cy="0" rx="18" ry="5" fill="hsl(146,60%,47%)"/>
-              {/* main wings */}
-              <polygon points="-4,-4 -4,4 -16,14 -18,14 -16,4" fill="hsl(146,60%,47%)"/>
-              {/* tail */}
-              <polygon points="-14,-3 -20,-11 -22,-11 -20,-3" fill="hsl(146,60%,47%)"/>
-            </g>
           </svg>
         </div>
 
