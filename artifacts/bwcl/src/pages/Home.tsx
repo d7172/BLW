@@ -282,11 +282,13 @@ export default function Home() {
               </div>
             </div>
             
-            <div className="bg-primary rounded-[2.5rem] p-10 flex flex-col justify-between group hover:-translate-y-1 transition-all shadow-lg text-white shadow-primary/20 border border-transparent">
-              <Cpu className="h-12 w-12 text-white mb-6" />
+            <div className="bg-white rounded-[2.5rem] p-10 flex flex-col justify-between group hover:-translate-y-1 transition-all shadow-sm border border-emerald-100/70">
+              <div className="h-14 w-14 rounded-2xl bg-emerald-50 flex items-center justify-center mb-6 group-hover:bg-emerald-100 transition-colors">
+                <Cpu className="h-7 w-7 text-emerald-500" />
+              </div>
               <div>
-                <h3 className="text-2xl md:text-3xl font-bold mb-3 font-serif">Custom Solutions</h3>
-                <p className="text-white/80 font-medium">Tailored, industry-specific logistics design matching your exact enterprise requirements and constraints.</p>
+                <h3 className="text-2xl md:text-3xl font-bold mb-3 font-serif text-foreground">Custom Solutions</h3>
+                <p className="text-muted-foreground font-medium">Tailored, industry-specific logistics design matching your exact enterprise requirements and constraints.</p>
               </div>
             </div>
 
