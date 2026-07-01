@@ -48,120 +48,70 @@ export default function Home() {
         <div className="absolute inset-0 overflow-hidden pointer-events-none select-none">
           <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" className="w-full h-full">
 
-            {/* ── Dotted routes + moving dots ── */}
+            {/* ── 8 well-spaced dotted routes + moving dots ── */}
 
-            {/* Green routes */}
-            <path fill="none" stroke="hsl(146,60%,47%)" strokeOpacity="0.22" strokeWidth="1.5" strokeDasharray="4 8"
-              d="M 0,420 Q 360,280 720,340 Q 1080,400 1440,260"/>
-            <circle r="3.5" fill="hsl(146,60%,47%)" opacity="0.65">
-              <animateMotion dur="14s" repeatCount="indefinite" begin="0s"
-                path="M 0,420 Q 360,280 720,340 Q 1080,400 1440,260"/>
+            {/* Route 1 — green, top band */}
+            <path fill="none" stroke="hsl(146,60%,47%)" strokeOpacity="0.28" strokeWidth="1.5" strokeDasharray="5 12"
+              d="M 0,160 Q 720,80 1440,180"/>
+            <circle r="3.5" fill="hsl(146,60%,47%)" opacity="0.70">
+              <animateMotion dur="16s" repeatCount="indefinite" begin="0s"
+                path="M 0,160 Q 720,80 1440,180"/>
             </circle>
 
-            <path fill="none" stroke="hsl(146,60%,47%)" strokeOpacity="0.22" strokeWidth="1.5" strokeDasharray="4 8"
-              d="M 1440,640 Q 1000,520 600,570 Q 200,620 0,500"/>
-            <circle r="2.8" fill="hsl(146,60%,47%)" opacity="0.60">
-              <animateMotion dur="11s" repeatCount="indefinite" begin="3s"
-                path="M 1440,640 Q 1000,520 600,570 Q 200,620 0,500"/>
+            {/* Route 2 — coral, upper-mid */}
+            <path fill="none" stroke="hsl(14,88%,60%)" strokeOpacity="0.25" strokeWidth="1.5" strokeDasharray="5 12"
+              d="M 1440,310 Q 720,220 0,330"/>
+            <circle r="3.2" fill="hsl(14,88%,60%)" opacity="0.65">
+              <animateMotion dur="14s" repeatCount="indefinite" begin="2s"
+                path="M 1440,310 Q 720,220 0,330"/>
             </circle>
 
-            <path fill="none" stroke="hsl(146,60%,47%)" strokeOpacity="0.22" strokeWidth="1.5" strokeDasharray="4 8"
-              d="M 0,200 Q 480,120 720,180 Q 960,240 1440,140"/>
-            <circle r="3" fill="hsl(146,60%,47%)" opacity="0.62">
-              <animateMotion dur="16s" repeatCount="indefinite" begin="1s"
-                path="M 0,200 Q 480,120 720,180 Q 960,240 1440,140"/>
-            </circle>
-
-            <path fill="none" stroke="hsl(146,60%,47%)" strokeOpacity="0.22" strokeWidth="1.5" strokeDasharray="4 8"
-              d="M 720,0 Q 800,200 760,450 Q 720,700 680,900"/>
-            <circle r="2.4" fill="hsl(146,60%,47%)" opacity="0.58">
-              <animateMotion dur="10s" repeatCount="indefinite" begin="7s"
-                path="M 720,0 Q 800,200 760,450 Q 720,700 680,900"/>
-            </circle>
-
-            <path fill="none" stroke="hsl(146,60%,47%)" strokeOpacity="0.22" strokeWidth="1.5" strokeDasharray="4 8"
-              d="M 0,750 Q 500,600 900,680 Q 1200,740 1440,600"/>
-            <circle r="3.2" fill="hsl(146,60%,47%)" opacity="0.60">
+            {/* Route 3 — green, mid */}
+            <path fill="none" stroke="hsl(146,60%,47%)" strokeOpacity="0.28" strokeWidth="1.5" strokeDasharray="5 12"
+              d="M 0,470 Q 720,380 1440,460"/>
+            <circle r="3" fill="hsl(146,60%,47%)" opacity="0.65">
               <animateMotion dur="18s" repeatCount="indefinite" begin="5s"
-                path="M 0,750 Q 500,600 900,680 Q 1200,740 1440,600"/>
+                path="M 0,470 Q 720,380 1440,460"/>
             </circle>
 
-            <path fill="none" stroke="hsl(146,60%,47%)" strokeOpacity="0.22" strokeWidth="1.5" strokeDasharray="4 8"
-              d="M 1440,380 Q 900,300 500,360 Q 200,410 0,320"/>
-            <circle r="2.6" fill="hsl(146,60%,47%)" opacity="0.58">
-              <animateMotion dur="12s" repeatCount="indefinite" begin="9s"
-                path="M 1440,380 Q 900,300 500,360 Q 200,410 0,320"/>
+            {/* Route 4 — coral, lower-mid */}
+            <path fill="none" stroke="hsl(14,88%,60%)" strokeOpacity="0.25" strokeWidth="1.5" strokeDasharray="5 12"
+              d="M 1440,600 Q 720,510 0,610"/>
+            <circle r="3.2" fill="hsl(14,88%,60%)" opacity="0.65">
+              <animateMotion dur="15s" repeatCount="indefinite" begin="7s"
+                path="M 1440,600 Q 720,510 0,610"/>
             </circle>
 
-            <path fill="none" stroke="hsl(146,60%,47%)" strokeOpacity="0.22" strokeWidth="1.5" strokeDasharray="4 8"
-              d="M 300,0 Q 260,180 320,400 Q 380,620 300,900"/>
-            <circle r="2" fill="hsl(146,60%,47%)" opacity="0.55">
-              <animateMotion dur="9s" repeatCount="indefinite" begin="2s"
-                path="M 300,0 Q 260,180 320,400 Q 380,620 300,900"/>
+            {/* Route 5 — green, bottom */}
+            <path fill="none" stroke="hsl(146,60%,47%)" strokeOpacity="0.28" strokeWidth="1.5" strokeDasharray="5 12"
+              d="M 0,780 Q 720,700 1440,790"/>
+            <circle r="2.8" fill="hsl(146,60%,47%)" opacity="0.62">
+              <animateMotion dur="20s" repeatCount="indefinite" begin="3s"
+                path="M 0,780 Q 720,700 1440,790"/>
             </circle>
 
-            <path fill="none" stroke="hsl(146,60%,47%)" strokeOpacity="0.22" strokeWidth="1.5" strokeDasharray="4 8"
-              d="M 0,580 Q 360,480 700,530 Q 1040,580 1440,460"/>
-            <circle r="2.2" fill="hsl(146,60%,47%)" opacity="0.55">
-              <animateMotion dur="13s" repeatCount="indefinite" begin="11s"
-                path="M 0,580 Q 360,480 700,530 Q 1040,580 1440,460"/>
+            {/* Route 6 — coral, left-side diagonal */}
+            <path fill="none" stroke="hsl(14,88%,60%)" strokeOpacity="0.25" strokeWidth="1.5" strokeDasharray="5 12"
+              d="M 260,0 Q 200,300 300,600 Q 350,750 280,900"/>
+            <circle r="2.6" fill="hsl(14,88%,60%)" opacity="0.62">
+              <animateMotion dur="13s" repeatCount="indefinite" begin="1s"
+                path="M 260,0 Q 200,300 300,600 Q 350,750 280,900"/>
             </circle>
 
-            {/* Coral routes */}
-            <path fill="none" stroke="hsl(14,88%,60%)" strokeOpacity="0.20" strokeWidth="1.5" strokeDasharray="4 8"
-              d="M 1440,300 Q 960,180 480,250 Q 200,300 0,200"/>
-            <circle r="3.2" fill="hsl(14,88%,60%)" opacity="0.60">
-              <animateMotion dur="15s" repeatCount="indefinite" begin="2s"
-                path="M 1440,300 Q 960,180 480,250 Q 200,300 0,200"/>
+            {/* Route 7 — green, centre vertical */}
+            <path fill="none" stroke="hsl(146,60%,47%)" strokeOpacity="0.28" strokeWidth="1.5" strokeDasharray="5 12"
+              d="M 720,0 Q 760,300 700,600 Q 660,750 720,900"/>
+            <circle r="2.4" fill="hsl(146,60%,47%)" opacity="0.62">
+              <animateMotion dur="11s" repeatCount="indefinite" begin="9s"
+                path="M 720,0 Q 760,300 700,600 Q 660,750 720,900"/>
             </circle>
 
-            <path fill="none" stroke="hsl(14,88%,60%)" strokeOpacity="0.20" strokeWidth="1.5" strokeDasharray="4 8"
-              d="M 0,680 Q 400,560 800,620 Q 1100,670 1440,560"/>
-            <circle r="2.8" fill="hsl(14,88%,60%)" opacity="0.58">
-              <animateMotion dur="12s" repeatCount="indefinite" begin="5s"
-                path="M 0,680 Q 400,560 800,620 Q 1100,670 1440,560"/>
-            </circle>
-
-            <path fill="none" stroke="hsl(14,88%,60%)" strokeOpacity="0.20" strokeWidth="1.5" strokeDasharray="4 8"
-              d="M 1100,0 Q 1060,200 1100,450 Q 1140,700 1080,900"/>
-            <circle r="2.4" fill="hsl(14,88%,60%)" opacity="0.56">
-              <animateMotion dur="10s" repeatCount="indefinite" begin="8s"
-                path="M 1100,0 Q 1060,200 1100,450 Q 1140,700 1080,900"/>
-            </circle>
-
-            <path fill="none" stroke="hsl(14,88%,60%)" strokeOpacity="0.20" strokeWidth="1.5" strokeDasharray="4 8"
-              d="M 0,350 Q 500,220 900,300 Q 1200,360 1440,240"/>
-            <circle r="3" fill="hsl(14,88%,60%)" opacity="0.58">
-              <animateMotion dur="17s" repeatCount="indefinite" begin="0s"
-                path="M 0,350 Q 500,220 900,300 Q 1200,360 1440,240"/>
-            </circle>
-
-            <path fill="none" stroke="hsl(14,88%,60%)" strokeOpacity="0.20" strokeWidth="1.5" strokeDasharray="4 8"
-              d="M 1440,820 Q 1000,700 580,760 Q 240,810 0,720"/>
-            <circle r="2.2" fill="hsl(14,88%,60%)" opacity="0.54">
-              <animateMotion dur="8s" repeatCount="indefinite" begin="4s"
-                path="M 1440,820 Q 1000,700 580,760 Q 240,810 0,720"/>
-            </circle>
-
-            <path fill="none" stroke="hsl(14,88%,60%)" strokeOpacity="0.20" strokeWidth="1.5" strokeDasharray="4 8"
-              d="M 600,0 Q 560,200 600,440 Q 640,680 580,900"/>
-            <circle r="2.6" fill="hsl(14,88%,60%)" opacity="0.56">
-              <animateMotion dur="11s" repeatCount="indefinite" begin="6s"
-                path="M 600,0 Q 560,200 600,440 Q 640,680 580,900"/>
-            </circle>
-
-            <path fill="none" stroke="hsl(14,88%,60%)" strokeOpacity="0.20" strokeWidth="1.5" strokeDasharray="4 8"
-              d="M 1440,500 Q 880,400 440,460 Q 120,510 0,420"/>
-            <circle r="2" fill="hsl(14,88%,60%)" opacity="0.52">
-              <animateMotion dur="14s" repeatCount="indefinite" begin="10s"
-                path="M 1440,500 Q 880,400 440,460 Q 120,510 0,420"/>
-            </circle>
-
-            <path fill="none" stroke="hsl(14,88%,60%)" strokeOpacity="0.20" strokeWidth="1.5" strokeDasharray="4 8"
-              d="M 0,160 Q 600,80 1000,140 Q 1240,180 1440,100"/>
-            <circle r="3.4" fill="hsl(14,88%,60%)" opacity="0.58">
-              <animateMotion dur="19s" repeatCount="indefinite" begin="3s"
-                path="M 0,160 Q 600,80 1000,140 Q 1240,180 1440,100"/>
+            {/* Route 8 — coral, right-side diagonal */}
+            <path fill="none" stroke="hsl(14,88%,60%)" strokeOpacity="0.25" strokeWidth="1.5" strokeDasharray="5 12"
+              d="M 1180,0 Q 1240,300 1160,600 Q 1100,750 1180,900"/>
+            <circle r="2.6" fill="hsl(14,88%,60%)" opacity="0.62">
+              <animateMotion dur="15s" repeatCount="indefinite" begin="6s"
+                path="M 1180,0 Q 1240,300 1160,600 Q 1100,750 1180,900"/>
             </circle>
 
           </svg>
