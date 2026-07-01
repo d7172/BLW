@@ -44,103 +44,82 @@ export default function Home() {
         <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-primary/10 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/3"></div>
         <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-secondary/10 rounded-full blur-[80px] translate-y-1/2 -translate-x-1/4"></div>
 
-        {/* World map — geographic lon/lat outlines + trade-route dots */}
-        {(() => {
-          // Equirectangular projection: x=(lon+180)*1000/360, y=(90-lat)*500/180
-          const x = (lon: number) => ((lon + 180) * 1000 / 360).toFixed(1);
-          const y = (lat: number) => ((90 - lat) * 500 / 180).toFixed(1);
-          const poly = (pts: [number, number][]) =>
-            pts.map(([lo, la], i) => `${i === 0 ? 'M' : 'L'}${x(lo)},${y(la)}`).join(' ') + 'Z';
+        {/* Animated route dots */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none select-none">
+          <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" className="w-full h-full">
 
-          // Key continent outlines as [lon, lat] arrays (clockwise)
-          const greenland = poly([[-54,77],[-18,77],[-18,70],[-25,63],[-44,60],[-54,63],[-54,77]]);
-          const northAmerica = poly([
-            [-168,53],[-160,65],[-140,62],[-125,50],[-120,35],
-            [-105,20],[-87,15],[-80,26],[-80,32],[-75,44],
-            [-56,47],[-60,57],[-80,73],[-100,73],[-130,70],[-155,72],
-          ]);
-          const centralAmerica = poly([[-83,10],[-77,8],[-80,9],[-83,10]]);
-          const southAmerica = poly([
-            [-80,8],[-72,12],[-63,11],[-35,-5],[-40,-20],
-            [-43,-23],[-52,-30],[-58,-34],[-68,-55],[-75,-50],
-            [-70,-28],[-77,-14],[-80,-2],[-80,5],
-          ]);
-          const uk = poly([[-5,50],[2,52],[-1,59],[-5,58]]);
-          const scandinavia = poly([[5,58],[20,72],[30,70],[28,64],[18,58]]);
-          const europe = poly([
-            [-9,37],[3,37],[25,37],[36,42],[36,47],[27,47],
-            [14,46],[8,44],[3,43],[0,47],[-8,44],[-9,37],
-          ]);
-          const africa = poly([
-            [-17,14],[10,37],[37,37],[42,11],[50,11],
-            [43,-12],[35,-26],[28,-35],[18,-34],[13,-17],
-            [8,5],[-5,5],[-17,10],
-          ]);
-          const madagascar = poly([[44,-13],[50,-13],[50,-26],[44,-26]]);
-          const asia = poly([
-            [26,42],[36,37],[57,24],[60,22],[68,24],[80,8],
-            [92,22],[105,2],[120,22],[135,35],[142,47],[170,65],
-            [178,68],[140,74],[60,73],[30,68],
-          ]);
-          const arabianPen = poly([[36,29],[55,14],[60,22],[56,24],[46,24],[44,28]]);
-          const india = poly([[68,23],[80,28],[80,20],[79,8],[77,8],[68,12]]);
-          const seAsia = poly([[100,10],[115,5],[118,2],[115,-5],[105,-8],[105,5],[100,10]]);
-          const japan = poly([[130,33],[131,34],[141,41],[141,43],[135,34],[130,33]]);
-          const australia = poly([
-            [114,-22],[114,-35],[118,-38],[128,-38],[138,-36],[148,-38],
-            [152,-28],[154,-24],[152,-18],[138,-15],[131,-12],[126,-14],
-            [122,-18],[114,-22],
-          ]);
-          const newZealand = poly([[166,-46],[172,-46],[174,-41],[174,-36],[172,-34],[168,-38],[166,-46]]);
+            {/* ── 16 dots on varied curved paths across the full hero ── */}
 
-          const continents = [
-            greenland, northAmerica, southAmerica, uk, scandinavia, europe,
-            africa, madagascar, asia, arabianPen, india, seAsia, japan,
-            australia, newZealand,
-          ];
+            {/* Green dots */}
+            <circle r="3.5" fill="hsl(146,60%,47%)" opacity="0.50">
+              <animateMotion dur="14s" repeatCount="indefinite" begin="0s"
+                path="M 0,420 Q 360,280 720,340 Q 1080,400 1440,260"/>
+            </circle>
+            <circle r="2.8" fill="hsl(146,60%,47%)" opacity="0.45">
+              <animateMotion dur="11s" repeatCount="indefinite" begin="3s"
+                path="M 1440,640 Q 1000,520 600,570 Q 200,620 0,500"/>
+            </circle>
+            <circle r="3" fill="hsl(146,60%,47%)" opacity="0.48">
+              <animateMotion dur="16s" repeatCount="indefinite" begin="1s"
+                path="M 0,200 Q 480,120 720,180 Q 960,240 1440,140"/>
+            </circle>
+            <circle r="2.4" fill="hsl(146,60%,47%)" opacity="0.42">
+              <animateMotion dur="10s" repeatCount="indefinite" begin="7s"
+                path="M 720,0 Q 800,200 760,450 Q 720,700 680,900"/>
+            </circle>
+            <circle r="3.2" fill="hsl(146,60%,47%)" opacity="0.46">
+              <animateMotion dur="18s" repeatCount="indefinite" begin="5s"
+                path="M 0,750 Q 500,600 900,680 Q 1200,740 1440,600"/>
+            </circle>
+            <circle r="2.6" fill="hsl(146,60%,47%)" opacity="0.44">
+              <animateMotion dur="12s" repeatCount="indefinite" begin="9s"
+                path="M 1440,380 Q 900,300 500,360 Q 200,410 0,320"/>
+            </circle>
+            <circle r="2" fill="hsl(146,60%,47%)" opacity="0.38">
+              <animateMotion dur="9s" repeatCount="indefinite" begin="2s"
+                path="M 300,0 Q 260,180 320,400 Q 380,620 300,900"/>
+            </circle>
+            <circle r="2.2" fill="hsl(146,60%,47%)" opacity="0.40">
+              <animateMotion dur="13s" repeatCount="indefinite" begin="11s"
+                path="M 0,580 Q 360,480 700,530 Q 1040,580 1440,460"/>
+            </circle>
 
-          // Trade-route arc paths for animated dots (same projection)
-          const routes = {
-            shanghaiRotterdam: `M${x(121)},${y(31)} Q${x(80)},${y(55)} ${x(4)},${y(52)}`,
-            mumbaiLondon:       `M${x(73)},${y(19)} Q${x(40)},${y(40)} ${x(-1)},${y(51)}`,
-            nyLondon:           `M${x(-74)},${y(41)} Q${x(-38)},${y(52)} ${x(-1)},${y(51)}`,
-            laShanghai:         `M${x(-118)},${y(34)} Q${x(180)},${y(55)} ${x(121)},${y(31)}`,
-            sydneySingapore:    `M${x(151)},${y(-34)} Q${x(130)},${y(-5)} ${x(104)},${y(1)}`,
-            dubaiShanghai:      `M${x(55)},${y(25)} Q${x(88)},${y(28)} ${x(121)},${y(31)}`,
-          };
+            {/* Coral dots */}
+            <circle r="3.2" fill="hsl(14,88%,60%)" opacity="0.45">
+              <animateMotion dur="15s" repeatCount="indefinite" begin="2s"
+                path="M 1440,300 Q 960,180 480,250 Q 200,300 0,200"/>
+            </circle>
+            <circle r="2.8" fill="hsl(14,88%,60%)" opacity="0.42">
+              <animateMotion dur="12s" repeatCount="indefinite" begin="5s"
+                path="M 0,680 Q 400,560 800,620 Q 1100,670 1440,560"/>
+            </circle>
+            <circle r="2.4" fill="hsl(14,88%,60%)" opacity="0.40">
+              <animateMotion dur="10s" repeatCount="indefinite" begin="8s"
+                path="M 1100,0 Q 1060,200 1100,450 Q 1140,700 1080,900"/>
+            </circle>
+            <circle r="3" fill="hsl(14,88%,60%)" opacity="0.44">
+              <animateMotion dur="17s" repeatCount="indefinite" begin="0s"
+                path="M 0,350 Q 500,220 900,300 Q 1200,360 1440,240"/>
+            </circle>
+            <circle r="2.2" fill="hsl(14,88%,60%)" opacity="0.38">
+              <animateMotion dur="8s" repeatCount="indefinite" begin="4s"
+                path="M 1440,820 Q 1000,700 580,760 Q 240,810 0,720"/>
+            </circle>
+            <circle r="2.6" fill="hsl(14,88%,60%)" opacity="0.40">
+              <animateMotion dur="11s" repeatCount="indefinite" begin="6s"
+                path="M 600,0 Q 560,200 600,440 Q 640,680 580,900"/>
+            </circle>
+            <circle r="2" fill="hsl(14,88%,60%)" opacity="0.36">
+              <animateMotion dur="14s" repeatCount="indefinite" begin="10s"
+                path="M 1440,500 Q 880,400 440,460 Q 120,510 0,420"/>
+            </circle>
+            <circle r="3.4" fill="hsl(14,88%,60%)" opacity="0.42">
+              <animateMotion dur="19s" repeatCount="indefinite" begin="3s"
+                path="M 0,160 Q 600,80 1000,140 Q 1240,180 1440,100"/>
+            </circle>
 
-          return (
-            <div className="absolute inset-0 overflow-hidden pointer-events-none select-none">
-              <svg viewBox="0 0 1000 500" preserveAspectRatio="xMidYMid meet" className="w-full h-full">
-                {/* Continent outlines */}
-                <g fill="hsl(146,60%,47%)" fillOpacity="0.07"
-                   stroke="hsl(146,60%,47%)" strokeOpacity="0.25" strokeWidth="1" strokeLinejoin="round">
-                  {continents.map((d, i) => <path key={i} d={d}/>)}
-                </g>
-
-                {/* Animated trade-route dots */}
-                <circle r="3" fill="hsl(146,60%,47%)" opacity="0.55">
-                  <animateMotion dur="13s" repeatCount="indefinite" path={routes.shanghaiRotterdam}/>
-                </circle>
-                <circle r="2.6" fill="hsl(146,60%,47%)" opacity="0.50">
-                  <animateMotion dur="10s" repeatCount="indefinite" begin="4s" path={routes.mumbaiLondon}/>
-                </circle>
-                <circle r="2.8" fill="hsl(14,88%,60%)" opacity="0.50">
-                  <animateMotion dur="9s" repeatCount="indefinite" begin="1.5s" path={routes.nyLondon}/>
-                </circle>
-                <circle r="3" fill="hsl(14,88%,60%)" opacity="0.45">
-                  <animateMotion dur="18s" repeatCount="indefinite" begin="6s" path={routes.laShanghai}/>
-                </circle>
-                <circle r="2.4" fill="hsl(146,60%,47%)" opacity="0.48">
-                  <animateMotion dur="8s" repeatCount="indefinite" begin="2s" path={routes.sydneySingapore}/>
-                </circle>
-                <circle r="2.6" fill="hsl(14,88%,60%)" opacity="0.48">
-                  <animateMotion dur="11s" repeatCount="indefinite" begin="7s" path={routes.dubaiShanghai}/>
-                </circle>
-              </svg>
-            </div>
-          );
-        })()}
+          </svg>
+        </div>
 
         <div className="container mx-auto relative z-10 grid lg:grid-cols-12 gap-12 items-center">
           <motion.div 
