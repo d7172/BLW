@@ -184,6 +184,27 @@
   --ring: 146 64% 37%;
 }
 
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-22px) rotate(4deg); }
+}
+@keyframes float-medium {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-14px) rotate(-3deg); }
+}
+@keyframes drift-x {
+  0%, 100% { transform: translateX(0px) translateY(0px); }
+  33% { transform: translateX(20px) translateY(-10px); }
+  66% { transform: translateX(-10px) translateY(-18px); }
+}
+@keyframes route-dash {
+  to { stroke-dashoffset: -200; }
+}
+@keyframes pulse-dot {
+  0%, 100% { transform: scale(1); opacity: 0.4; }
+  50% { transform: scale(1.6); opacity: 0.1; }
+}
+
 @layer base {
   * {
     @apply border-border;

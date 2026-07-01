@@ -43,7 +43,35 @@ export default function Home() {
         <div className="absolute inset-0 bg-background"></div>
         <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-primary/10 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/3"></div>
         <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-secondary/10 rounded-full blur-[80px] translate-y-1/2 -translate-x-1/4"></div>
-        
+
+        {/* Animated logistics background */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none select-none">
+          <Train    style={{ opacity: 0.06, animation: 'float-slow 9s ease-in-out infinite' }}          className="absolute top-[18%] left-[6%] h-14 w-14 text-primary" />
+          <Ship     style={{ opacity: 0.05, animation: 'float-medium 11s ease-in-out infinite 1.5s' }}  className="absolute top-[55%] right-[8%] h-16 w-16 text-primary" />
+          <Plane    style={{ opacity: 0.06, animation: 'drift-x 13s ease-in-out infinite 0.5s' }}       className="absolute top-[10%] right-[24%] h-12 w-12 text-primary" />
+          <Truck    style={{ opacity: 0.05, animation: 'float-slow 10s ease-in-out infinite 3s' }}      className="absolute bottom-[22%] left-[10%] h-14 w-14 text-primary" />
+          <Package  style={{ opacity: 0.06, animation: 'float-medium 8s ease-in-out infinite 2s' }}     className="absolute top-[38%] right-[30%] h-10 w-10 text-secondary" />
+          <Globe2   style={{ opacity: 0.04, animation: 'float-slow 14s ease-in-out infinite 4s' }}      className="absolute bottom-[15%] right-[16%] h-16 w-16 text-primary" />
+          <Warehouse style={{ opacity: 0.05, animation: 'drift-x 12s ease-in-out infinite 1s' }}        className="absolute top-[68%] left-[28%] h-12 w-12 text-primary" />
+
+          {/* Animated route network */}
+          <svg className="absolute inset-0 w-full h-full" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" fill="none">
+            <path d="M100,700 Q300,400 600,350 Q900,300 1350,180" stroke="hsl(146,60%,47%)" strokeWidth="1.5" strokeDasharray="8 14" opacity="0.1" style={{ animation: 'route-dash 7s linear infinite' }} />
+            <path d="M50,520 Q250,330 560,295 Q860,265 1310,140" stroke="hsl(146,60%,47%)" strokeWidth="1" strokeDasharray="5 16" opacity="0.07" style={{ animation: 'route-dash 10s linear infinite 2s' }} />
+            <path d="M200,820 Q500,605 725,490 Q955,375 1400,275" stroke="hsl(14,88%,60%)" strokeWidth="1.5" strokeDasharray="10 12" opacity="0.06" style={{ animation: 'route-dash 9s linear infinite 1s' }} />
+            {/* Node circles */}
+            <circle cx="100"  cy="700" r="5"  fill="hsl(146,60%,47%)" opacity="0.14" />
+            <circle cx="600"  cy="350" r="6"  fill="hsl(146,60%,47%)" opacity="0.12" />
+            <circle cx="1350" cy="180" r="5"  fill="hsl(146,60%,47%)" opacity="0.12" />
+            <circle cx="560"  cy="295" r="4"  fill="hsl(146,60%,47%)" opacity="0.1"  />
+            <circle cx="725"  cy="490" r="5"  fill="hsl(14,88%,60%)"  opacity="0.1"  />
+            {/* Pulsing rings */}
+            <circle cx="600"  cy="350" r="14" fill="none" stroke="hsl(146,60%,47%)" strokeWidth="1.5" opacity="0.1"  style={{ animation: 'pulse-dot 3.5s ease-in-out infinite' }} />
+            <circle cx="1350" cy="180" r="11" fill="none" stroke="hsl(146,60%,47%)" strokeWidth="1"   opacity="0.08" style={{ animation: 'pulse-dot 3.5s ease-in-out infinite 1.8s' }} />
+            <circle cx="725"  cy="490" r="11" fill="none" stroke="hsl(14,88%,60%)"  strokeWidth="1"   opacity="0.07" style={{ animation: 'pulse-dot 3.5s ease-in-out infinite 0.9s' }} />
+          </svg>
+        </div>
+
         <div className="container mx-auto relative z-10 grid lg:grid-cols-12 gap-12 items-center">
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
