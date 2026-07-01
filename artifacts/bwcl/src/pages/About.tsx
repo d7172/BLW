@@ -9,13 +9,13 @@ export default function About() {
   const { ref: statsRef, inView: statsInView } = useInView({ triggerOnce: true, threshold: 0.1 });
 
   const values = [
-    { title: "Commitment", desc: "Unwavering dedication to meeting and exceeding our operational promises.", icon: Shield, bg: "bg-emerald-500", iconBg: "bg-emerald-400/30", iconColor: "text-white", text: "text-white", sub: "text-emerald-100" },
-    { title: "Ownership", desc: "Taking full responsibility for every freight movement, from origin to destination.", icon: Briefcase, bg: "bg-orange-500", iconBg: "bg-orange-400/30", iconColor: "text-white", text: "text-white", sub: "text-orange-100" },
-    { title: "Team Work", desc: "Collaborating seamlessly across all logistics nodes and organizational levels.", icon: Users, bg: "bg-sky-500", iconBg: "bg-sky-400/30", iconColor: "text-white", text: "text-white", sub: "text-sky-100" },
-    { title: "Innovation", desc: "Continuously integrating advanced logistics technology to refine our operations.", icon: Lightbulb, bg: "bg-violet-500", iconBg: "bg-violet-400/30", iconColor: "text-white", text: "text-white", sub: "text-violet-100" },
-    { title: "Integrity", desc: "Operating with absolute transparency and ethical clarity in all interactions.", icon: CheckCircle2, bg: "bg-teal-500", iconBg: "bg-teal-400/30", iconColor: "text-white", text: "text-white", sub: "text-teal-100" },
-    { title: "Relationship-Centric", desc: "Fostering long-term, high-trust partnerships with our enterprise clients.", icon: HeartHandshake, bg: "bg-rose-500", iconBg: "bg-rose-400/30", iconColor: "text-white", text: "text-white", sub: "text-rose-100" },
-    { title: "Flexibility", desc: "Adapting swiftly to shifting supply chain demands and dynamic market conditions.", icon: Zap, bg: "bg-amber-500", iconBg: "bg-amber-400/30", iconColor: "text-white", text: "text-white", sub: "text-amber-100" },
+    { title: "Commitment", desc: "Unwavering dedication to meeting and exceeding our operational promises.", icon: Shield },
+    { title: "Ownership", desc: "Taking full responsibility for every freight movement, from origin to destination.", icon: Briefcase },
+    { title: "Team Work", desc: "Collaborating seamlessly across all logistics nodes and organizational levels.", icon: Users },
+    { title: "Innovation", desc: "Continuously integrating advanced logistics technology to refine our operations.", icon: Lightbulb },
+    { title: "Integrity", desc: "Operating with absolute transparency and ethical clarity in all interactions.", icon: CheckCircle2 },
+    { title: "Relationship-Centric", desc: "Fostering long-term, high-trust partnerships with our enterprise clients.", icon: HeartHandshake },
+    { title: "Flexibility", desc: "Adapting swiftly to shifting supply chain demands and dynamic market conditions.", icon: Zap },
   ];
 
   return (
@@ -104,12 +104,12 @@ export default function About() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {values.map((val, i) => (
-              <div key={i} className={`${val.bg} p-8 rounded-[2rem] flex flex-col items-start transition-opacity hover:opacity-90`}>
-                <div className={`h-14 w-14 rounded-2xl ${val.iconBg} flex items-center justify-center mb-6`}>
-                  <val.icon className={`h-7 w-7 ${val.iconColor}`} />
+              <div key={i} className="bg-white p-8 rounded-[2rem] border border-slate-100 shadow-sm hover:shadow-md transition-shadow flex flex-col items-start">
+                <div className="h-12 w-12 rounded-xl bg-primary/10 flex items-center justify-center mb-6">
+                  <val.icon className="h-6 w-6 text-primary" />
                 </div>
-                <h3 className={`text-2xl font-bold mb-3 font-serif ${val.text}`}>{val.title}</h3>
-                <p className={`${val.sub} font-medium leading-relaxed`}>{val.desc}</p>
+                <h3 className="text-xl font-bold mb-3 font-serif text-foreground">{val.title}</h3>
+                <p className="text-muted-foreground font-medium leading-relaxed">{val.desc}</p>
               </div>
             ))}
           </div>
