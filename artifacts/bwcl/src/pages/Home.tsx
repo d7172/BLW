@@ -57,6 +57,11 @@ export default function Home() {
           <MapPin   style={{ opacity: 0.06, animation: 'float-medium 7s ease-in-out infinite 0.8s' }}    className="absolute bottom-[40%] right-[22%] h-10 w-10 text-secondary" />
           <Zap      style={{ opacity: 0.05, animation: 'drift-x 9s ease-in-out infinite 3.5s' }}         className="absolute bottom-[35%] left-[35%] h-9 w-9 text-primary" />
 
+          {/* Traversing vehicles */}
+          <Train style={{ opacity: 0.13, position: 'absolute', top: '74%', left: 0, animation: 'traverse-ltr 22s linear infinite' }}       className="h-12 w-12 text-primary" />
+          <Ship  style={{ opacity: 0.11, position: 'absolute', top: '50%', left: 0, animation: 'traverse-rtl 32s linear infinite 8s' }}    className="h-14 w-14 text-primary" />
+          <Plane style={{ opacity: 0.11, position: 'absolute', top: '11%', left: 0, animation: 'traverse-plane 19s linear infinite 4s' }} className="h-11 w-11 text-primary" />
+
           {/* Animated route network */}
           <svg className="absolute inset-0 w-full h-full" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" fill="none">
             <path d="M100,700 Q300,400 600,350 Q900,300 1350,180" stroke="hsl(146,60%,47%)" strokeWidth="1.5" strokeDasharray="8 14" opacity="0.1" style={{ animation: 'route-dash 7s linear infinite' }} />
