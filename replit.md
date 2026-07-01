@@ -1,11 +1,11 @@
-# BWCL — BW Container Lines
+# BLW — Bharat Logistics & Warehousing LLP
 
-A premium marketing website for BWCL (BW Container Lines), an Indian rail-first multimodal logistics company, with a real contact/quote-request backend.
+A premium marketing website for BLW (Bharat Logistics & Warehousing LLP), an Indian rail-first multimodal logistics company, with a real contact/quote-request backend.
 
 ## Run & Operate
 
 - `pnpm --filter @workspace/api-server run dev` — run the API server (contact backend)
-- `pnpm --filter @workspace/bwcl run dev` — run the BWCL website (Vite)
+- `pnpm --filter @workspace/bwcl run dev` — run the BLW website (Vite)
 - `pnpm --filter @workspace/bwcl run typecheck` — typecheck the website (use this to verify, not `build`)
 - `pnpm run typecheck` — full typecheck across all packages
 - `pnpm --filter @workspace/api-spec run codegen` — regenerate API hooks and Zod schemas from the OpenAPI spec

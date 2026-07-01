@@ -71,7 +71,7 @@ export default function Contact() {
   return (
     <>
       <SEO 
-        title="Contact BWCL | Let's Connect"
+        title="Contact BLW | Let's Connect"
         description="Collaborating to move India forward. Partner with us to scale your logistics operations."
         canonical="/contact"
       />
@@ -212,7 +212,7 @@ export default function Contact() {
                         </FormControl>
                         <div className="space-y-1 leading-none">
                           <FormLabel className="font-medium text-muted-foreground leading-relaxed">
-                            I agree to the <a href="/privacy-policy" className="text-primary font-bold hover:underline">Privacy Policy</a> and consent to BWCL contacting me regarding my inquiry.
+                            I agree to the <a href="/privacy-policy" className="text-primary font-bold hover:underline">Privacy Policy</a> and consent to BLW contacting me regarding my inquiry.
                           </FormLabel>
                           <FormMessage />
                         </div>

@@ -6,7 +6,7 @@ import { PackageX } from "lucide-react";
 export default function NotFound() {
   return (
     <>
-      <SEO title="404 - Cargo Not Found | BWCL" description="Page not found" />
+      <SEO title="404 - Cargo Not Found | BLW" description="Page not found" />
       <div className="min-h-[80vh] flex flex-col items-center justify-center bg-background px-4 text-center py-20">
         <div className="h-32 w-32 bg-white rounded-[2rem] shadow-sm border border-slate-100 flex items-center justify-center text-muted-foreground mb-8">
           <PackageX className="h-16 w-16 text-primary" />

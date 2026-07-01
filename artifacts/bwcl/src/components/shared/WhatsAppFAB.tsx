@@ -5,7 +5,7 @@ export default function WhatsAppFAB() {
   return (
     <>
       <a
-        href="https://wa.me/919483077277?text=Hello%20BWCL%2C%20I%20am%20interested%20in%20your%20logistics%20services.%20Please%20share%20more%20details."
+        href="https://wa.me/919483077277?text=Hello%20BLW%2C%20I%20am%20interested%20in%20your%20logistics%20services.%20Please%20share%20more%20details."
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-20 md:bottom-8 right-6 md:right-8 z-40 flex h-16 w-16 items-center justify-center rounded-[1.5rem] bg-[#25D366] text-white shadow-xl shadow-[#25D366]/40 transition-transform hover:-translate-y-2 group"
@@ -15,7 +15,7 @@ export default function WhatsAppFAB() {
         <MessageCircle className="relative z-10 h-8 w-8" />
         
         <span className="absolute right-full mr-4 w-max rounded-xl bg-foreground px-4 py-2 text-sm font-bold text-white opacity-0 transition-opacity group-hover:opacity-100 pointer-events-none shadow-md hidden md:block">
-          Chat with BWCL
+          Chat with BLW
         </span>
       </a>
 

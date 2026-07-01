@@ -20,8 +20,8 @@ export default function About() {
   return (
     <>
       <SEO 
-        title="About BWCL | Our Story, Mission & Leadership"
-        description="Learn about BW Container Lines (BWCL) - India's trusted integrated logistics partner powering economic growth through rail, road, sea, and air."
+        title="About BLW | Our Story, Mission & Leadership"
+        description="Learn about Bharat Logistics & Warehousing (BLW) - India's trusted integrated logistics partner powering economic growth through rail, road, sea, and air."
         canonical="/about"
       />
       
@@ -36,7 +36,7 @@ export default function About() {
             Driving India's Supply Chain <span className="font-serif italic text-primary font-normal">Forward.</span>
           </h1>
           <p className="text-xl text-muted-foreground font-medium leading-relaxed max-w-2xl mx-auto">
-            Headquartered in Moodbidri, Karnataka, BWCL is a premier multimodal logistics company committed to reliability, technology, and sustainable growth.
+            Headquartered in Moodbidri, Karnataka, BLW is a premier multimodal logistics company committed to reliability, technology, and sustainable growth.
           </p>
         </div>
       </section>
@@ -57,7 +57,7 @@ export default function About() {
               <TrendingUp className="h-12 w-12 text-white mb-8" />
               <h2 className="text-3xl md:text-4xl font-bold mb-6 font-serif">Our Vision</h2>
               <p className="text-lg text-white/90 font-medium leading-relaxed">
-                To revolutionize rail transportation by setting new standards for efficiency, innovation, and sustainability, establishing BWCL as the foremost leader in rail cargo logistics.
+                To revolutionize rail transportation by setting new standards for efficiency, innovation, and sustainability, establishing BLW as the foremost leader in rail cargo logistics.
               </p>
             </div>
           </div>
@@ -93,7 +93,7 @@ export default function About() {
         <div className="container mx-auto px-6">
           <div className="text-center mb-16 max-w-3xl mx-auto">
             <h2 className="text-4xl md:text-6xl font-bold mb-6 font-serif">Core <span className="italic text-primary font-normal">Values</span></h2>
-            <p className="text-slate-300 text-lg md:text-xl font-medium">The fundamental principles that guide every decision, route, and relationship at BWCL.</p>
+            <p className="text-slate-300 text-lg md:text-xl font-medium">The fundamental principles that guide every decision, route, and relationship at BLW.</p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
@@ -118,7 +118,7 @@ export default function About() {
           
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {[
-              { name: "Jain Vishwas", role: "Managing Director", bio: "Leading BWCL's overarching vision and strategic integration of rail logistics networks across India." },
+              { name: "Jain Vishwas", role: "Managing Director", bio: "Leading BLW's overarching vision and strategic integration of rail logistics networks across India." },
               { name: "Rajesh K", role: "Director", bio: "Spearheading operational excellence and ensuring flawless execution of multimodal freight operations." },
               { name: "Umesh Prasad B", role: "Director", bio: "Driving sustainable growth, compliance, and fostering long-term relationships with enterprise partners." }
             ].map((exec, i) => (
@@ -141,7 +141,7 @@ export default function About() {
           <div className="text-center max-w-4xl mx-auto mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6 font-serif">Why <span className="italic text-primary font-normal">Choose Us</span></h2>
             <p className="text-lg md:text-xl text-muted-foreground font-medium">
-              BWCL is built on logistical expertise, vision, and operational excellence — delivering transparent, reliable, and cost-efficient multimodal solutions with highly attractive ROI.
+              BLW is built on logistical expertise, vision, and operational excellence — delivering transparent, reliable, and cost-efficient multimodal solutions with highly attractive ROI.
             </p>
           </div>
 

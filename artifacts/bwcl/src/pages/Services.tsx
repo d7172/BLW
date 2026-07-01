@@ -52,8 +52,8 @@ export default function Services() {
   return (
     <>
       <SEO 
-        title="Logistics Services | Rail, Road, Sea, Air & Warehousing - BWCL"
-        description="Comprehensive enterprise logistics services: Railway, Road, Sea, Air freight, Warehousing, and Project Cargo by BWCL."
+        title="Logistics Services | Rail, Road, Sea, Air & Warehousing - BLW"
+        description="Comprehensive enterprise logistics services: Railway, Road, Sea, Air freight, Warehousing, and Project Cargo by BLW."
         canonical="/services"
       />
       

@@ -37,7 +37,7 @@ export default function Home() {
   return (
     <>
       <SEO 
-        title="BWCL | Moving India's Freight Forward"
+        title="BLW | Moving India's Freight Forward"
         description="Empowering Multimodal Logistics with a Railway-First Strategy. India's premier integrated supply chain partner."
         canonical="/"
       />
@@ -257,7 +257,7 @@ export default function Home() {
         <div className="container mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-4xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
-              Why Partner With <span className="font-serif italic text-primary font-normal">BWCL</span>
+              Why Partner With <span className="font-serif italic text-primary font-normal">BLW</span>
             </h2>
             <p className="text-lg md:text-xl text-muted-foreground font-medium">The enterprise advantage for India's most demanding supply chains.</p>
           </div>

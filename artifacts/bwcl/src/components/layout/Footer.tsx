@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Facebook, Instagram, Linkedin, Twitter, Youtube, ArrowRight } from "lucide-react";
-import logo from "@assets/bwcl-logo.png";
+import logo from "@assets/blw-logo.png";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
@@ -14,7 +14,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-12 mb-16">
           <div className="sm:col-span-2 lg:col-span-4">
             <Link to="/" className="inline-block mb-8 bg-white p-3 rounded-2xl shadow-sm">
-              <img src={logo} alt="BWCL" className="h-10 w-auto" />
+              <img src={logo} alt="BLW" className="h-10 w-auto" />
             </Link>
             <p className="text-primary-foreground/90 mb-8 max-w-sm text-lg font-medium leading-relaxed">
               Empowering Multimodal Logistics with a Railway-First Strategy. Green freight moving India forward.
@@ -68,7 +68,7 @@ export default function Footer() {
         </div>
         
         <div className="pt-8 border-t border-white/20 flex flex-col md:flex-row items-center justify-between gap-6 text-sm font-medium text-primary-foreground/85">
-          <p>© {new Date().getFullYear()} BW Container Lines (BWCL). All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Bharat Logistics & Warehousing LLP (BLW). All rights reserved.</p>
           <div className="flex flex-wrap justify-center gap-6">
             <Link to="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
             <Link to="/terms-and-conditions" className="hover:text-white transition-colors">Terms & Conditions</Link>
