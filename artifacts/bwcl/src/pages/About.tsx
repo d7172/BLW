@@ -95,11 +95,11 @@ export default function About() {
       </section>
 
       {/* Core Values (Bento) */}
-      <section className="py-24 bg-gray-900 text-white rounded-[4rem] mx-4 mb-24">
+      <section className="py-24 bg-stone-50 rounded-[4rem] mx-4 mb-24">
         <div className="container mx-auto">
           <div className="text-center mb-16 max-w-3xl mx-auto">
-            <h2 className="text-4xl md:text-6xl font-bold mb-6 font-serif text-white">Core <span className="italic text-white/70 font-normal">Values</span></h2>
-            <p className="text-white/70 text-lg md:text-xl font-medium">The fundamental principles that guide every decision, route, and relationship at BLW.</p>
+            <h2 className="text-4xl md:text-6xl font-bold mb-6 font-serif text-foreground">Core <span className="italic text-primary font-normal">Values</span></h2>
+            <p className="text-muted-foreground text-lg md:text-xl font-medium">The fundamental principles that guide every decision, route, and relationship at BLW.</p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
