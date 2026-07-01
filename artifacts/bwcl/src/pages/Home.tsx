@@ -68,11 +68,8 @@ export default function Home() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Button asChild size="lg" className="rounded-full bg-primary hover:bg-primary/90 text-white h-14 px-8 text-lg font-semibold shadow-lg shadow-primary/20 transition-all hover:scale-105 active:scale-95 w-full sm:w-auto">
+              <Button asChild size="lg" className="rounded-full bg-primary hover:bg-primary/90 text-white h-16 px-10 text-xl font-semibold shadow-lg shadow-primary/20 transition-all hover:scale-105 active:scale-95 w-full sm:w-auto">
                 <Link to="/services">Explore Services</Link>
-              </Button>
-              <Button asChild size="lg" variant="outline" className="rounded-full h-14 px-8 text-lg font-semibold border-border bg-white hover:bg-slate-50 transition-all hover:scale-105 active:scale-95 w-full sm:w-auto">
-                <Link to="/contact">Request Quote</Link>
               </Button>
             </div>
           </motion.div>
@@ -114,7 +111,7 @@ export default function Home() {
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={heroInView ? { opacity: 1, scale: 1 } : {}}
                 transition={{ delay: 0.4, duration: 0.6 }}
-                className="bg-slate-800 text-white p-8 rounded-[2rem] shadow-xl flex flex-col justify-between aspect-square"
+                className="bg-[#939393] text-white p-8 rounded-[2rem] shadow-xl flex flex-col justify-between aspect-square"
               >
                 <div className="h-14 w-14 rounded-2xl bg-white/10 flex items-center justify-center mb-auto">
                   <Globe2 className="h-7 w-7 text-white" />
