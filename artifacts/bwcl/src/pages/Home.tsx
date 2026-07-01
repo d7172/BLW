@@ -197,23 +197,20 @@ export default function Home() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {[
-              { title: "Railway Logistics", icon: Train, img: "https://images.unsplash.com/photo-1474487548417-781cb71495f3?w=800&q=80", desc: "Truck-on-Train, Freight Forwarding Scheme for aggregation of small consignments, and door-to-door connectivity across all rail touchpoints." },
-              { title: "Sea / Ship Logistics", icon: Ship, img: "https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?w=800&q=80", desc: "Global ocean coverage for FCL & LCL, efficient customs clearance, and scalable, eco-friendly maritime operations." },
-              { title: "Road Logistics", icon: Truck, img: "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=800&q=80", desc: "Pan-India ground coverage with LTL, FTL, PTL, and ODC movements, plus superfast cargo services with a fleet of 100+ owned trucks." },
-              { title: "Air Logistics", icon: Plane, img: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&q=80", desc: "Strategic partnerships with major airlines and a broad network of airport facilities worldwide for unparalleled global reach." }
+              { title: "Railway Logistics", icon: Train, desc: "Truck-on-Train, Freight Forwarding Scheme for aggregation of small consignments, and door-to-door connectivity across all rail touchpoints." },
+              { title: "Sea / Ship Logistics", icon: Ship, desc: "Global ocean coverage for FCL & LCL, efficient customs clearance, and scalable, eco-friendly maritime operations." },
+              { title: "Road Logistics", icon: Truck, desc: "Pan-India ground coverage with LTL, FTL, PTL, and ODC movements, plus superfast cargo services with a fleet of 100+ owned trucks." },
+              { title: "Air Logistics", icon: Plane, desc: "Strategic partnerships with major airlines and a broad network of airport facilities worldwide for unparalleled global reach." }
             ].map((service, i) => (
-              <Link to="/services" key={i} className="group relative rounded-[2.5rem] overflow-hidden aspect-[4/3] flex flex-col justify-end p-8 bg-slate-900 isolation-isolate">
-                <img src={service.img} alt={service.title} className="absolute inset-0 w-full h-full object-cover opacity-60 transition-transform duration-1000 group-hover:scale-105 -z-10" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent -z-10"></div>
-                
-                <div className="relative z-10 text-white transform transition-transform duration-500 translate-y-4 group-hover:translate-y-0">
-                  <div className="h-14 w-14 rounded-[1.25rem] bg-white/20 backdrop-blur-md flex items-center justify-center mb-6 text-white group-hover:bg-primary transition-colors border border-white/20">
-                    <service.icon className="h-7 w-7" />
-                  </div>
-                  <h3 className="text-2xl md:text-3xl font-bold mb-3 font-serif">{service.title}</h3>
-                  <p className="text-slate-200 font-medium mb-6 line-clamp-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500">{service.desc}</p>
-                  <div className="inline-flex items-center text-primary font-bold uppercase tracking-wider text-sm bg-white px-4 py-2 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 shadow-lg">
-                    Learn More <ArrowRight className="ml-2 h-4 w-4" />
+              <Link to="/services" key={i} className="group bg-emerald-50 rounded-[2.5rem] p-10 flex flex-col justify-between hover:-translate-y-1 transition-all duration-300 shadow-sm border border-emerald-100 min-h-[260px]">
+                <div className="h-16 w-16 rounded-[1.25rem] bg-emerald-100 flex items-center justify-center mb-8 group-hover:bg-emerald-200 transition-colors">
+                  <service.icon className="h-8 w-8 text-emerald-600" />
+                </div>
+                <div>
+                  <h3 className="text-2xl md:text-3xl font-bold mb-3 font-serif text-emerald-950">{service.title}</h3>
+                  <p className="text-emerald-800 font-medium leading-relaxed mb-6">{service.desc}</p>
+                  <div className="inline-flex items-center text-emerald-700 font-bold text-sm group-hover:gap-2 transition-all">
+                    Learn More <ArrowRight className="ml-1.5 h-4 w-4" />
                   </div>
                 </div>
               </Link>
