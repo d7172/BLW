@@ -44,35 +44,69 @@ export default function Home() {
         <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-primary/10 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/3"></div>
         <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-secondary/10 rounded-full blur-[80px] translate-y-1/2 -translate-x-1/4"></div>
 
-        {/* Animated logistics background */}
+        {/* Route paths + vehicles traversing A → B */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none select-none">
-          <Train    style={{ opacity: 0.06, animation: 'float-slow 9s ease-in-out infinite' }}          className="absolute top-[18%] left-[6%] h-14 w-14 text-primary" />
-          <Ship     style={{ opacity: 0.05, animation: 'float-medium 11s ease-in-out infinite 1.5s' }}  className="absolute top-[55%] right-[8%] h-16 w-16 text-primary" />
-          <Plane    style={{ opacity: 0.06, animation: 'drift-x 13s ease-in-out infinite 0.5s' }}       className="absolute top-[10%] right-[24%] h-12 w-12 text-primary" />
-          <Truck    style={{ opacity: 0.05, animation: 'float-slow 10s ease-in-out infinite 3s' }}      className="absolute bottom-[22%] left-[10%] h-14 w-14 text-primary" />
-          <Package  style={{ opacity: 0.06, animation: 'float-medium 8s ease-in-out infinite 2s' }}     className="absolute top-[38%] right-[30%] h-10 w-10 text-secondary" />
-          <Globe2   style={{ opacity: 0.04, animation: 'float-slow 14s ease-in-out infinite 4s' }}      className="absolute bottom-[15%] right-[16%] h-16 w-16 text-primary" />
-          <Warehouse style={{ opacity: 0.05, animation: 'drift-x 12s ease-in-out infinite 1s' }}        className="absolute top-[68%] left-[28%] h-12 w-12 text-primary" />
-          <Network  style={{ opacity: 0.05, animation: 'float-slow 11s ease-in-out infinite 2.5s' }}     className="absolute top-[30%] left-[20%] h-10 w-10 text-primary" />
-          <MapPin   style={{ opacity: 0.06, animation: 'float-medium 7s ease-in-out infinite 0.8s' }}    className="absolute bottom-[40%] right-[22%] h-10 w-10 text-secondary" />
-          <Zap      style={{ opacity: 0.05, animation: 'drift-x 9s ease-in-out infinite 3.5s' }}         className="absolute bottom-[35%] left-[35%] h-9 w-9 text-primary" />
+          <svg className="absolute inset-0 w-full h-full" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice">
+            {/* Route 1 — Train track: bottom-left → upper-right */}
+            <path d="M-30,740 Q300,430 620,355 Q900,278 1480,140"
+              stroke="hsl(146,60%,47%)" strokeWidth="1.5" strokeDasharray="8 14" opacity="0.12" fill="none"
+              style={{ animation: 'route-dash 7s linear infinite' }}/>
 
-          {/* Traversing vehicles */}
-          <Train style={{ opacity: 0.13, position: 'absolute', top: '74%', left: 0, animation: 'traverse-ltr 22s linear infinite' }}       className="h-12 w-12 text-primary" />
-          <Ship  style={{ opacity: 0.11, position: 'absolute', top: '50%', left: 0, animation: 'traverse-rtl 32s linear infinite 8s' }}    className="h-14 w-14 text-primary" />
-          <Plane style={{ opacity: 0.11, position: 'absolute', top: '11%', left: 0, animation: 'traverse-plane 19s linear infinite 4s' }} className="h-11 w-11 text-primary" />
+            {/* Route 2 — Ship lane: upper-right → lower-left (RTL) */}
+            <path d="M1480,820 Q1100,640 800,545 Q500,445 -30,325"
+              stroke="hsl(14,88%,60%)" strokeWidth="1.5" strokeDasharray="10 12" opacity="0.09" fill="none"
+              style={{ animation: 'route-dash 9s linear infinite 1s' }}/>
 
-          {/* Animated route network */}
-          <svg className="absolute inset-0 w-full h-full" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" fill="none">
-            <path d="M100,700 Q300,400 600,350 Q900,300 1350,180" stroke="hsl(146,60%,47%)" strokeWidth="1.5" strokeDasharray="8 14" opacity="0.1" style={{ animation: 'route-dash 7s linear infinite' }} />
-            <path d="M50,520 Q250,330 560,295 Q860,265 1310,140" stroke="hsl(146,60%,47%)" strokeWidth="1" strokeDasharray="5 16" opacity="0.07" style={{ animation: 'route-dash 10s linear infinite 2s' }} />
-            <path d="M200,820 Q500,605 725,490 Q955,375 1400,275" stroke="hsl(14,88%,60%)" strokeWidth="1.5" strokeDasharray="10 12" opacity="0.06" style={{ animation: 'route-dash 9s linear infinite 1s' }} />
-            {/* Node circles */}
-            <circle cx="100"  cy="700" r="5"  fill="hsl(146,60%,47%)" opacity="0.14" />
-            <circle cx="600"  cy="350" r="6"  fill="hsl(146,60%,47%)" opacity="0.12" />
-            <circle cx="1350" cy="180" r="5"  fill="hsl(146,60%,47%)" opacity="0.12" />
-            <circle cx="560"  cy="295" r="4"  fill="hsl(146,60%,47%)" opacity="0.1"  />
-            <circle cx="725"  cy="490" r="5"  fill="hsl(14,88%,60%)"  opacity="0.1"  />
+            {/* Route 3 — Air lane: gentle arc top left → top right */}
+            <path d="M-30,105 Q360,58 720,82 Q1080,108 1480,58"
+              stroke="hsl(146,60%,47%)" strokeWidth="1" strokeDasharray="5 16" opacity="0.07" fill="none"
+              style={{ animation: 'route-dash 10s linear infinite 2s' }}/>
+
+            {/* Origin / destination nodes */}
+            <circle cx="0"    cy="740" r="6" fill="hsl(146,60%,47%)" opacity="0.20"/>
+            <circle cx="1440" cy="140" r="6" fill="hsl(146,60%,47%)" opacity="0.18"/>
+            <circle cx="1440" cy="820" r="6" fill="hsl(14,88%,60%)"  opacity="0.20"/>
+            <circle cx="0"    cy="325" r="6" fill="hsl(14,88%,60%)"  opacity="0.18"/>
+            <circle cx="0"    cy="105" r="5" fill="hsl(146,60%,47%)" opacity="0.15"/>
+            <circle cx="1440" cy="58"  r="5" fill="hsl(146,60%,47%)" opacity="0.13"/>
+
+            {/* ── Train (follows route 1) ── */}
+            <g opacity="0.22">
+              <animateMotion dur="22s" repeatCount="indefinite" rotate="auto"
+                path="M-30,740 Q300,430 620,355 Q900,278 1480,140"/>
+              {/* body */}
+              <rect x="-24" y="-8" width="48" height="16" rx="5" fill="hsl(146,60%,47%)"/>
+              {/* cab */}
+              <rect x="-20" y="-16" width="22" height="10" rx="2" fill="hsl(146,60%,47%)"/>
+              {/* wheels */}
+              <circle cx="-14" cy="8" r="5" fill="hsl(146,60%,47%)"/>
+              <circle cx="0"   cy="8" r="5" fill="hsl(146,60%,47%)"/>
+              <circle cx="14"  cy="8" r="5" fill="hsl(146,60%,47%)"/>
+            </g>
+
+            {/* ── Ship (follows route 2, RTL) ── */}
+            <g opacity="0.20">
+              <animateMotion dur="30s" repeatCount="indefinite" begin="6s" rotate="auto"
+                path="M1480,820 Q1100,640 800,545 Q500,445 -30,325"/>
+              {/* hull */}
+              <path d="M-22,0 L22,0 L16,12 Q0,16 -16,12 Z" fill="hsl(14,88%,60%)"/>
+              {/* superstructure */}
+              <rect x="-8" y="-16" width="18" height="16" rx="2" fill="hsl(14,88%,60%)"/>
+              {/* funnel */}
+              <rect x="4" y="-22" width="6" height="8" rx="1" fill="hsl(14,88%,60%)"/>
+            </g>
+
+            {/* ── Plane (follows route 3) ── */}
+            <g opacity="0.20">
+              <animateMotion dur="18s" repeatCount="indefinite" begin="2s" rotate="auto"
+                path="M-30,105 Q360,58 720,82 Q1080,108 1480,58"/>
+              {/* fuselage */}
+              <ellipse cx="0" cy="0" rx="18" ry="5" fill="hsl(146,60%,47%)"/>
+              {/* main wings */}
+              <polygon points="-4,-4 -4,4 -16,14 -18,14 -16,4" fill="hsl(146,60%,47%)"/>
+              {/* tail */}
+              <polygon points="-14,-3 -20,-11 -22,-11 -20,-3" fill="hsl(146,60%,47%)"/>
+            </g>
           </svg>
         </div>
 
