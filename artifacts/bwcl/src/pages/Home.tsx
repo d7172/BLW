@@ -118,7 +118,7 @@ export default function Home() {
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={heroInView ? { opacity: 1, scale: 1 } : {}}
                 transition={{ delay: 0.4, duration: 0.6 }}
-                className="bg-[#272B30] text-white p-8 rounded-[2rem] shadow-xl flex flex-col justify-between aspect-square"
+                className="bg-slate-800 text-white p-8 rounded-[2rem] shadow-xl flex flex-col justify-between aspect-square"
               >
                 <div className="h-14 w-14 rounded-2xl bg-white/10 flex items-center justify-center mb-auto">
                   <Globe2 className="h-7 w-7 text-white" />
@@ -191,7 +191,7 @@ export default function Home() {
               <p className="text-muted-foreground font-medium leading-relaxed">Positioned to harness the strengths of rail-based logistics, prioritizing green, high-capacity freight movement across the subcontinent.</p>
             </div>
             
-            <div className="bg-[#272B30] rounded-[2.5rem] p-10 shadow-xl text-white hover:-translate-y-2 transition-transform duration-300">
+            <div className="bg-slate-800 rounded-[2.5rem] p-10 shadow-xl text-white hover:-translate-y-2 transition-transform duration-300">
               <div className="h-16 w-16 rounded-[1.25rem] bg-white/10 flex items-center justify-center mb-8">
                 <Network className="h-8 w-8 text-white" />
               </div>
@@ -263,7 +263,7 @@ export default function Home() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 auto-rows-auto md:auto-rows-[300px]">
-            <div className="bg-[#272B30] rounded-[2.5rem] p-10 flex flex-col justify-between group hover:-translate-y-1 transition-all shadow-lg border border-transparent">
+            <div className="bg-slate-800 rounded-[2.5rem] p-10 flex flex-col justify-between group hover:-translate-y-1 transition-all shadow-lg border border-transparent">
               <Search className="h-12 w-12 text-primary mb-6" />
               <div>
                 <h3 className="text-2xl md:text-3xl font-bold text-white mb-3 font-serif">Tech-Enabled Visibility</h3>
