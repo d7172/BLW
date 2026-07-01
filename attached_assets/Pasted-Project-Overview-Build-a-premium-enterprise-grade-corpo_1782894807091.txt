@@ -1,0 +1,904 @@
+Project Overview
+
+Build a premium enterprise-grade corporate logistics website for BWCL (https://bwcl.in).
+
+The reference screenshots I have shared are only for understanding the page structure, content hierarchy, and business information.
+
+IMPORTANT
+DO NOT copy the design.
+DO NOT copy the layout.
+DO NOT copy the typography.
+DO NOT copy the colors.
+DO NOT copy spacing.
+DO NOT copy buttons.
+DO NOT copy cards.
+DO NOT copy UI components.
+
+Instead, create a completely original premium website.
+
+The business information should remain the same, but rewrite every piece of content professionally using SEO-friendly language. Nothing should be copied verbatim.
+
+Website Goal
+
+Create a website that looks like it was designed by a ₹5–10 lakh design agency.
+
+The overall experience should feel similar in quality to:
+
+Stripe
+Linear
+Vercel
+Framer
+Webflow Enterprise
+Apple
+Cuberto
+Awwwards-winning websites
+
+The design should immediately communicate:
+
+Premium
+Modern
+Trustworthy
+Innovative
+Enterprise
+Technology-driven
+Business
+
+BWCL
+
+Industry
+
+Rail Logistics
+Road Logistics
+Sea Freight
+Air Freight
+Multimodal Logistics
+Freight Forwarding
+Warehousing
+Supply Chain
+Industrial Transportation
+Technology Stack
+
+Use
+
+React 19
+TypeScript
+Vite
+Tailwind CSS
+React Router
+Framer Motion
+GSAP (only where required)
+Lenis Smooth Scroll
+React Helmet Async
+Lucide React Icons
+React Hook Form
+Zod Validation
+SwiperJS
+React CountUp
+React Intersection Observer
+
+Code must be clean and reusable.
+
+Website Pages
+
+Create
+
+Home
+About
+Services
+Contact
+Privacy Policy
+Terms & Conditions
+404 Page
+Design Direction
+
+Use a completely different style than the reference website.
+
+The UI should be based on:
+
+Bento Grid
+Glass Morphism
+Soft Shadows
+Floating Cards
+Premium Animations
+Rounded Containers
+Modern Enterprise UI
+Large White Space
+Layered Backgrounds
+Abstract Shapes
+Gradient Blur Effects
+Interactive Hover Effects
+Animated Statistics
+Scroll Animations
+Premium Micro-interactions
+
+The design should not feel like a template.
+
+Color Palette
+
+Primary
+
+#0B1F3A
+
+Secondary
+
+#0E4BFF
+
+Accent
+
+#00C2A8
+
+Highlight
+
+#FFC857
+
+Background
+
+#F8FAFC
+
+Dark Background
+
+#07111F
+
+Text
+
+#111827
+
+Gray
+
+#6B7280
+
+Typography
+
+Use
+
+Plus Jakarta Sans
+
+or
+
+General Sans
+
+or
+
+Manrope
+
+Large bold headings
+
+Premium spacing
+
+Excellent readability
+
+Navbar
+
+Sticky
+
+Transparent over hero
+
+Blur effect
+
+Smooth transition
+
+Active page indicator
+
+Animated underline
+
+CTA Button
+
+Request Quote
+
+Home Page
+Hero
+
+Create a large Bento Grid Hero.
+
+Include
+
+Large headline
+
+Professional subtitle
+
+CTA buttons
+
+Animated statistics
+
+Floating logistics cards
+
+Interactive world map
+
+Animated freight route
+
+Gradient background
+
+Mouse movement effect
+
+Example Headline
+
+Moving India's Freight Smarter.
+
+Example Subtitle
+
+Delivering integrated multimodal logistics solutions through rail, road, sea, and air with technology, sustainability, and nationwide reach.
+
+Buttons
+
+Explore Services
+
+Request Quote
+
+Trusted By
+
+Animated scrolling logos.
+
+Why BWCL
+
+Bento Grid Cards
+
+Technology
+
+Infrastructure
+
+Rail Network
+
+Warehousing
+
+Nationwide Reach
+
+Digital Tracking
+
+ESG
+
+Customer Success
+
+Services Overview
+
+Premium Bento Cards
+
+Rail Logistics
+
+Road Logistics
+
+Sea Freight
+
+Air Freight
+
+Warehousing
+
+Project Cargo
+
+Each card
+
+Image
+
+Icon
+
+Hover Animation
+
+CTA
+
+Why Rail Logistics
+
+Interactive comparison
+
+Rail vs Road
+
+Cost Savings
+
+Capacity
+
+Carbon Emissions
+
+Transit Time
+
+Efficiency
+
+Industries Served
+
+Automobile
+
+Steel
+
+Mining
+
+Cement
+
+Chemical
+
+Retail
+
+Infrastructure
+
+Manufacturing
+
+FMCG
+
+Technology
+
+Real Time Tracking
+
+GPS
+
+IoT
+
+AI Monitoring
+
+Control Tower
+
+Analytics Dashboard
+
+Sustainability
+
+Green Logistics
+
+Carbon Reduction
+
+Energy Efficient Transport
+
+ESG Goals
+
+Statistics
+
+Animated counters
+
+30K+
+
+76+
+
+95%
+
+65%
+
+Testimonials
+
+Modern Slider
+
+FAQ
+
+Accordion
+
+Final CTA
+
+Let's Build Smarter Logistics Together
+
+About Page
+
+Hero
+
+Company Overview
+
+Mission
+
+Vision
+
+Leadership
+
+Timeline
+
+Core Values
+
+Strategic Pillars
+
+Business Philosophy
+
+Future Vision
+
+Achievements
+
+Animated Counters
+
+Premium Bento Layout
+
+Services Page
+
+Create detailed service sections
+
+Rail Logistics
+
+Road Logistics
+
+Sea Freight
+
+Air Freight
+
+Warehousing
+
+3PL
+
+FTL
+
+PTL
+
+ODC
+
+Container Transportation
+
+Project Cargo
+
+Freight Forwarding
+
+Each section should include
+
+Image
+
+Description
+
+Benefits
+
+Features
+
+Icons
+
+CTA
+
+Statistics
+
+Contact Page
+
+Hero
+
+Modern Contact Form
+
+Office Information
+
+Business Hours
+
+Google Map Embed Placeholder
+
+Quick Contact Cards
+
+FAQ
+
+Call to Action
+
+Footer
+
+Company
+
+Services
+
+Industries
+
+Resources
+
+Quick Links
+
+Newsletter
+
+Social Media
+
+Copyright
+
+Content
+
+Rewrite all content from the reference screenshots.
+
+DO NOT COPY.
+
+Make every paragraph
+
+Professional
+
+Human
+
+SEO Optimized
+
+Enterprise Tone
+
+Easy to Read
+
+Use keywords naturally.
+
+SEO
+
+Implement complete SEO.
+
+Every page must have
+
+Unique Meta Title
+
+Meta Description
+
+Meta Keywords
+
+Canonical URL
+
+Open Graph
+
+Twitter Cards
+
+Robots Meta
+
+Author Meta
+
+Viewport Meta
+
+Theme Color
+
+Language
+
+Geo Tags
+
+Favicon
+
+Apple Icons
+
+Manifest
+
+Organization Schema
+
+Website Schema
+
+Breadcrumb Schema
+
+Service Schema
+
+FAQ Schema
+
+Contact Schema
+
+JSON-LD
+
+Generate
+
+robots.txt
+
+sitemap.xml
+
+Clean URLs
+
+Examples
+
+/
+
+about
+
+services
+
+contact
+
+privacy-policy
+
+terms-and-conditions
+
+Performance
+
+Target Lighthouse
+
+Performance 95+
+
+SEO 100
+
+Accessibility 95+
+
+Best Practices 95+
+
+Use
+
+Lazy Loading
+
+WebP Images
+
+Responsive Images
+
+Code Splitting
+
+Tree Shaking
+
+Preload Fonts
+
+Image Optimization
+
+Critical CSS
+
+Contact Form
+
+Build production-ready contact form.
+
+Fields
+
+First Name *
+
+Last Name *
+
+Company
+
+Email *
+
+Phone *
+
+Country
+
+City
+
+Industry
+
+Service Required *
+
+Estimated Shipment Volume
+
+Message *
+
+Privacy Checkbox *
+
+Validation
+
+First Name
+
+Required
+
+Minimum 2 letters
+
+Maximum 50
+
+Letters only
+
+Last Name
+
+Same
+
+Email
+
+Valid Email
+
+Phone
+
+10–15 digits
+
+International Support
+
+Company
+
+Maximum 100
+
+Message
+
+Minimum 20
+
+Maximum 1000
+
+Trim Spaces
+
+Dropdown Required
+
+Privacy Checkbox Required
+
+Disable submit while sending.
+
+Loading animation.
+
+Success toast.
+
+Error messages.
+
+Use React Hook Form + Zod.
+
+Keep backend modular so it can connect with
+
+EmailJS
+
+SMTP
+
+Resend
+
+Nodemailer
+
+API
+
+Webhook
+
+WhatsApp Integration
+
+Floating WhatsApp Button
+
+Bottom Right
+
+Visible on every page
+
+Pulse Animation
+
+Tooltip
+
+Chat with BWCL
+
+Redirect to
+
+https://wa.me/919483077277
+
+Prefilled Message
+
+Hello BWCL,
+
+I am interested in your logistics services. Please share more details.
+
+Click To Call
+
+Floating Phone Button
+
+Mobile Only
+
+Call
+
++91 9483077277
+
+Sticky Mobile CTA
+
+Call Now
+
+WhatsApp
+
+Request Quote
+
+Contact Information
+
+Email
+
+info@bwcl.co.in
+
+Phone
+
++91 9483077277
+
+Office
+
+Door No. 5-106(85), Shop No. F16, 1st Floor,
+Canara Trade Centre,
+Bovikere,
+Nagarakatte Puttige Road,
+Moodbidri,
+Karnataka - 574227,
+India
+
+Images
+
+Use premium royalty-free logistics images from
+
+Unsplash
+
+Pexels
+
+Use modern high-quality photography.
+
+Large rounded images.
+
+Animations
+
+Framer Motion
+
+Fade
+
+Slide
+
+Blur Reveal
+
+Scale
+
+Parallax
+
+Count Up
+
+Hover Lift
+
+Card Tilt
+
+Gradient Movement
+
+Magnetic Buttons
+
+Smooth Scroll
+
+Micro Interactions
+
+Every button
+
+Every card
+
+Icons
+
+Navbar
+
+Forms
+
+FAQ
+
+Statistics
+
+Images
+
+Links
+
+Everything should feel interactive.
+
+Accessibility
+
+WCAG AA
+
+Keyboard Navigation
+
+ARIA Labels
+
+Alt Tags
+
+Screen Reader Support
+
+Focus States
+
+High Contrast
+
+Analytics Ready
+
+Prepare integration for
+
+Google Analytics 4
+
+Google Tag Manager
+
+Google Search Console
+
+Microsoft Clarity
+
+Meta Pixel
+
+LinkedIn Insight
+
+Tracking IDs should be stored in .env.
+
+Social Media
+
+Create configurable placeholders for
+
+LinkedIn
+
+Facebook
+
+Instagram
+
+YouTube
+
+X (Twitter)
+
+Security
+
+Validate all inputs.
+
+Sanitize form data.
+
+Prevent XSS.
+
+Prevent spam.
+
+No secrets in code.
+
+Use environment variables.
+
+Folder Structure
+src/
+│
+├── assets/
+├── components/
+│   ├── ui/
+│   ├── layout/
+│   ├── sections/
+│
+├── pages/
+│   ├── Home
+│   ├── About
+│   ├── Services
+│   ├── Contact
+│
+├── hooks/
+├── utils/
+├── context/
+├── data/
+├── styles/
+├── routes/
+├── seo/
+└── types/
+Coding Standards
+TypeScript throughout.
+Reusable components.
+No duplicated code.
+Clean architecture.
+Modular design.
+Responsive on all screen sizes.
+Maintainable code.
+Production-ready.
+Follow React best practices.
+Add comments where appropriate.
