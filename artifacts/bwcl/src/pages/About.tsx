@@ -116,30 +116,6 @@ export default function About() {
         </div>
       </section>
 
-      {/* Leadership Team */}
-      <section className="py-24 bg-white">
-        <div className="container mx-auto text-center">
-          <h2 className="text-4xl md:text-6xl font-bold text-foreground mb-6 font-serif">Leadership <span className="italic text-primary font-normal">Team</span></h2>
-          <p className="text-lg md:text-xl text-muted-foreground mb-16 max-w-2xl mx-auto font-medium">Guided by industry visionaries with unparalleled expertise in rail cargo and multimodal logistics.</p>
-          
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {[
-              { name: "Jain Vishwas", role: "Managing Director", bio: "Leading BLW's overarching vision and strategic integration of rail logistics networks across India." },
-              { name: "Rajesh K", role: "Director", bio: "Spearheading operational excellence and ensuring flawless execution of multimodal freight operations." },
-              { name: "Umesh Prasad B", role: "Director", bio: "Driving sustainable growth, compliance, and fostering long-term relationships with enterprise partners." }
-            ].map((exec, i) => (
-              <div key={i} className="bg-slate-50 rounded-[3rem] p-10 shadow-sm border border-slate-100 flex flex-col items-center text-center">
-                <div className="w-32 h-32 bg-primary text-white rounded-[2rem] mb-8 flex items-center justify-center text-5xl font-bold font-serif shadow-lg shadow-primary/20">
-                  {exec.name.charAt(0)}
-                </div>
-                <h3 className="text-2xl font-bold text-foreground mb-2 font-serif">{exec.name}</h3>
-                <p className="text-secondary font-bold uppercase tracking-wider text-sm mb-6">{exec.role}</p>
-                <p className="text-muted-foreground font-medium leading-relaxed">{exec.bio}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Partnership Metrics / ROI */}
       <section className="py-24 bg-background" ref={statsRef}>
