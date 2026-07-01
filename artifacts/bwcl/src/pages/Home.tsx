@@ -303,42 +303,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 7. Stats Rings */}
-      <section className="py-24 bg-white" ref={statsRef}>
-        <div className="container mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 md:gap-12">
-            {[
-              { val: 95, max: 100, suffix: "%", label: "Same-Day Delivery", color: "text-primary", ring: "stroke-primary" },
-              { val: 30, max: 100, suffix: "K+", label: "Ton Capacity", color: "text-secondary", ring: "stroke-secondary" },
-              { val: 76, max: 100, suffix: "+", label: "Countries Network", color: "text-foreground", ring: "stroke-foreground" },
-              { val: 65, max: 100, suffix: "%", label: "Cost Savings", color: "text-primary", ring: "stroke-primary" }
-            ].map((stat, i) => (
-              <div key={i} className="flex flex-col items-center">
-                <div className="relative w-28 h-28 sm:w-36 sm:h-36 md:w-40 md:h-40 mb-6">
-                  <svg className="w-full h-full transform -rotate-90" viewBox="0 0 100 100">
-                    <circle cx="50" cy="50" r="40" className="stroke-slate-100" strokeWidth="8" fill="none" />
-                    <circle 
-                      cx="50" cy="50" r="40" 
-                      strokeWidth="8" 
-                      fill="none" 
-                      strokeLinecap="round"
-                      style={statsInView ? getProgressStroke(stat.val, stat.max) : getProgressStroke(0, stat.max)}
-                      strokeDasharray={Math.PI * 80}
-                      className={`transition-all duration-1500 ease-out ${stat.ring}`}
-                    />
-                  </svg>
-                  <div className="absolute inset-0 flex items-center justify-center flex-col">
-                    <span className={`text-3xl sm:text-4xl font-bold font-serif ${stat.color}`}>
-                      {statsInView ? <CountUp end={stat.val} duration={2} /> : "0"}{stat.suffix}
-                    </span>
-                  </div>
-                </div>
-                <div className="text-center font-bold text-slate-600 uppercase tracking-wider text-sm">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
       
       {/* CTA */}
       <section className="py-28 bg-emerald-400 text-white text-center">
