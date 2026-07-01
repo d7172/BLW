@@ -8,9 +8,9 @@ import { z } from "zod";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Checkbox } from "@/components/ui/checkbox";
-import { useState } from "react";
-import { toast } from "sonner";
+import { useToast } from "@/hooks/use-toast";
 import { MapPin, Phone, Mail } from "lucide-react";
+import { useCreateContact } from "@workspace/api-client-react";
 
 const formSchema = z.object({
   firstName: z.string().min(2, "First name is required"),
@@ -24,8 +24,9 @@ const formSchema = z.object({
 });
 
 export default function Contact() {
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  
+  const { toast } = useToast();
+  const { mutateAsync, isPending } = useCreateContact();
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -41,42 +42,60 @@ export default function Contact() {
   });
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
-    setIsSubmitting(true);
-    // Simulate API call
-    await new Promise(r => setTimeout(r, 1500));
-    toast.success("Quote request submitted successfully. Our team will contact you shortly.");
-    form.reset();
-    setIsSubmitting(false);
+    try {
+      await mutateAsync({
+        data: {
+          firstName: values.firstName,
+          lastName: values.lastName,
+          company: values.company || undefined,
+          email: values.email,
+          phone: values.phone,
+          serviceRequired: values.serviceRequired,
+          message: values.message,
+        },
+      });
+      toast({
+        title: "Quote request submitted successfully",
+        description: "Our team will contact you shortly.",
+      });
+      form.reset();
+    } catch {
+      toast({
+        variant: "destructive",
+        title: "Something went wrong",
+        description: "Please try again or reach us directly at info@bwcl.co.in.",
+      });
+    }
   };
 
   return (
     <>
       <SEO 
-        title="Contact BWCL | Get a Free Logistics Quote"
-        description="Contact BW Container Lines for enterprise logistics quotes, inquiries, and supply chain solutions."
+        title="Contact BWCL | Let's Connect"
+        description="Collaborating to move India forward. Partner with us to scale your logistics operations."
         canonical="/contact"
       />
       
-      <section className="pt-32 pb-20 bg-[#0B1F3A] text-white">
+      <section className="pt-32 pb-16 md:pb-20 bg-[#0B1F3A] text-white">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Get in Touch With BWCL</h1>
-          <p className="text-xl text-slate-300 max-w-2xl mx-auto">Ready to optimize your supply chain? Request a quote or speak with our logistics experts today.</p>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 md:mb-6">Let's Connect</h1>
+          <p className="text-lg md:text-xl text-slate-300 max-w-2xl mx-auto font-light">Collaborating to move India forward. Partner with us to scale your logistics operations.</p>
         </div>
       </section>
 
-      <section className="py-24 bg-slate-50">
+      <section className="py-16 md:py-24 bg-slate-50">
         <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-3 gap-12 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-12 max-w-6xl mx-auto">
             <div className="lg:col-span-1 space-y-8">
-              <div className="bg-white p-8 rounded-2xl shadow-sm border border-border">
+              <div className="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-border">
                 <h3 className="text-xl font-bold text-slate-900 mb-6">Corporate Office</h3>
                 
                 <div className="space-y-6">
                   <div className="flex gap-4">
                     <MapPin className="h-6 w-6 text-secondary shrink-0" />
                     <div>
-                      <h4 className="font-semibold text-slate-900">Address</h4>
-                      <p className="text-slate-600 text-sm mt-1">Door No. 5-106(85), Shop No. F16, 1st Floor, Canara Trade Centre, Bovikere, Nagarakatte Puttige Road, Moodbidri, Karnataka - 574227, India</p>
+                      <h4 className="font-semibold text-slate-900">Headquarters</h4>
+                      <p className="text-slate-600 text-sm mt-1 leading-relaxed">Door No. 5-106(85), Shop No. F16, 1st Floor, Canara Trade Centre, Bovikere, Nagarakatte Puttige Road, Moodbidri, Karnataka - 574227, India</p>
                     </div>
                   </div>
                   
@@ -98,18 +117,19 @@ export default function Contact() {
                 </div>
               </div>
               
-              <div className="bg-slate-200 rounded-2xl h-[300px] flex items-center justify-center border border-border">
-                <div className="text-slate-500 font-medium">Map Placeholder</div>
+              <div className="bg-slate-200 rounded-2xl h-[250px] md:h-[300px] flex items-center justify-center border border-border overflow-hidden">
+                 {/* Map Placeholder or Iframe could go here. Keeping minimal as requested. */}
+                <div className="text-slate-500 font-medium">Map Area</div>
               </div>
             </div>
             
             <div className="lg:col-span-2">
-              <div className="bg-white p-8 md:p-10 rounded-2xl shadow-xl shadow-slate-200/50 border border-border">
-                <h2 className="text-2xl font-bold text-slate-900 mb-8">Request a Quote</h2>
+              <div className="bg-white p-6 md:p-10 rounded-2xl shadow-xl shadow-slate-200/50 border border-border">
+                <h2 className="text-2xl font-bold text-slate-900 mb-6 md:mb-8">Request a Quote</h2>
                 
                 <Form {...form}>
                   <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                       <FormField control={form.control} name="firstName" render={({ field }) => (
                         <FormItem>
                           <FormLabel>First Name *</FormLabel>
@@ -126,7 +146,7 @@ export default function Contact() {
                       )} />
                     </div>
                     
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                       <FormField control={form.control} name="email" render={({ field }) => (
                         <FormItem>
                           <FormLabel>Work Email *</FormLabel>
@@ -143,7 +163,7 @@ export default function Contact() {
                       )} />
                     </div>
                     
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                       <FormField control={form.control} name="company" render={({ field }) => (
                         <FormItem>
                           <FormLabel>Company Name</FormLabel>
@@ -161,8 +181,8 @@ export default function Contact() {
                               </SelectTrigger>
                             </FormControl>
                             <SelectContent>
-                              <SelectItem value="rail">Rail Logistics</SelectItem>
-                              <SelectItem value="road">Road Freight</SelectItem>
+                              <SelectItem value="rail">Railway Logistics</SelectItem>
+                              <SelectItem value="road">Road Logistics</SelectItem>
                               <SelectItem value="sea">Sea Freight</SelectItem>
                               <SelectItem value="air">Air Freight</SelectItem>
                               <SelectItem value="warehouse">Warehousing</SelectItem>
@@ -198,8 +218,8 @@ export default function Contact() {
                       </FormItem>
                     )} />
                     
-                    <Button type="submit" disabled={isSubmitting} className="w-full bg-secondary hover:bg-blue-600 h-14 text-lg rounded-xl text-white">
-                      {isSubmitting ? "Submitting Request..." : "Submit Quote Request"}
+                    <Button type="submit" disabled={isPending} className="w-full bg-secondary hover:bg-blue-600 h-14 text-base md:text-lg rounded-xl text-white">
+                      {isPending ? "Submitting Request..." : "Submit Quote Request"}
                     </Button>
                   </form>
                 </Form>

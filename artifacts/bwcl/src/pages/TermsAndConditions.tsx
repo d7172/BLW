@@ -4,7 +4,7 @@ export default function TermsAndConditions() {
   return (
     <>
       <SEO title="Terms & Conditions | BWCL" description="Terms and conditions for using BWCL logistics services." />
-      <div className="pt-32 pb-24 container mx-auto px-4 max-w-3xl prose prose-slate">
+      <div className="pt-24 md:pt-32 pb-16 md:pb-24 container mx-auto px-4 max-w-3xl prose prose-slate">
         <h1>Terms and Conditions</h1>
         <p className="text-slate-500">Last Updated: March 2024</p>
         

@@ -1,0 +1,1 @@
+- [Sonner toaster crashes without next-themes provider](sonner-toaster-next-themes.md) — in these Vite artifacts use useToast + @/components/ui/toaster; the sonner.tsx wrapper needs a next-themes provider or it throws at runtime.
