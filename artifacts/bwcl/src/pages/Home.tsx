@@ -161,12 +161,12 @@ export default function Home() {
               <p className="text-muted-foreground font-medium leading-relaxed">Positioned to harness the strengths of rail-based logistics, prioritizing green, high-capacity freight movement across the subcontinent.</p>
             </div>
             
-            <div className="bg-slate-800 rounded-[2.5rem] p-10 shadow-xl text-white hover:-translate-y-2 transition-transform duration-300">
-              <div className="h-16 w-16 rounded-[1.25rem] bg-white/10 flex items-center justify-center mb-8">
-                <Network className="h-8 w-8 text-white" />
+            <div className="bg-emerald-50 rounded-[2.5rem] p-10 shadow-sm hover:-translate-y-2 transition-transform duration-300">
+              <div className="h-16 w-16 rounded-[1.25rem] bg-emerald-100 flex items-center justify-center mb-8">
+                <Network className="h-8 w-8 text-emerald-600" />
               </div>
-              <h3 className="text-2xl font-bold mb-4 font-serif">Multimodal Coverage</h3>
-              <p className="text-slate-300 font-medium leading-relaxed">Integrating rail, road, sea, and air logistics into a seamless, end-to-end supply chain that optimizes both cost and transit time.</p>
+              <h3 className="text-2xl font-bold mb-4 font-serif text-emerald-950">Multimodal Coverage</h3>
+              <p className="text-emerald-800 font-medium leading-relaxed">Integrating rail, road, sea, and air logistics into a seamless, end-to-end supply chain that optimizes both cost and transit time.</p>
             </div>
             
             <div className="bg-white rounded-[2.5rem] p-10 shadow-sm border border-slate-100 hover:shadow-xl transition-all duration-300">
