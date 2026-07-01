@@ -1,4 +1,5 @@
 import { SEO } from "@/seo/SEO";
+import { RoutesBackground } from "@/components/ui/RoutesBackground";
 import { Link } from "react-router-dom";
 import { ArrowRight, Train, Truck, Ship, Plane, Warehouse, HardHat, Globe2, BarChart3, Leaf, Cpu, Network, Activity, Factory, Smartphone, Clock, MapPin, Search, Package, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -44,78 +45,7 @@ export default function Home() {
         <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-primary/10 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/3"></div>
         <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-secondary/10 rounded-full blur-[80px] translate-y-1/2 -translate-x-1/4"></div>
 
-        {/* Animated route dots */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none select-none">
-          <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" className="w-full h-full">
-
-            {/* ── 8 well-spaced dotted routes + moving dots ── */}
-
-            {/* Route 1 — green, top band */}
-            <path fill="none" stroke="hsl(146,60%,47%)" strokeOpacity="0.28" strokeWidth="1.5" strokeDasharray="5 12"
-              d="M 0,160 Q 720,80 1440,180"/>
-            <circle r="3.5" fill="hsl(146,60%,47%)" opacity="0.70">
-              <animateMotion dur="16s" repeatCount="indefinite" begin="0s"
-                path="M 0,160 Q 720,80 1440,180"/>
-            </circle>
-
-            {/* Route 2 — coral, upper-mid */}
-            <path fill="none" stroke="hsl(14,88%,60%)" strokeOpacity="0.25" strokeWidth="1.5" strokeDasharray="5 12"
-              d="M 1440,310 Q 720,220 0,330"/>
-            <circle r="3.2" fill="hsl(14,88%,60%)" opacity="0.65">
-              <animateMotion dur="14s" repeatCount="indefinite" begin="2s"
-                path="M 1440,310 Q 720,220 0,330"/>
-            </circle>
-
-            {/* Route 3 — green, mid */}
-            <path fill="none" stroke="hsl(146,60%,47%)" strokeOpacity="0.28" strokeWidth="1.5" strokeDasharray="5 12"
-              d="M 0,470 Q 720,380 1440,460"/>
-            <circle r="3" fill="hsl(146,60%,47%)" opacity="0.65">
-              <animateMotion dur="18s" repeatCount="indefinite" begin="5s"
-                path="M 0,470 Q 720,380 1440,460"/>
-            </circle>
-
-            {/* Route 4 — coral, lower-mid */}
-            <path fill="none" stroke="hsl(14,88%,60%)" strokeOpacity="0.25" strokeWidth="1.5" strokeDasharray="5 12"
-              d="M 1440,600 Q 720,510 0,610"/>
-            <circle r="3.2" fill="hsl(14,88%,60%)" opacity="0.65">
-              <animateMotion dur="15s" repeatCount="indefinite" begin="7s"
-                path="M 1440,600 Q 720,510 0,610"/>
-            </circle>
-
-            {/* Route 5 — green, bottom */}
-            <path fill="none" stroke="hsl(146,60%,47%)" strokeOpacity="0.28" strokeWidth="1.5" strokeDasharray="5 12"
-              d="M 0,780 Q 720,700 1440,790"/>
-            <circle r="2.8" fill="hsl(146,60%,47%)" opacity="0.62">
-              <animateMotion dur="20s" repeatCount="indefinite" begin="3s"
-                path="M 0,780 Q 720,700 1440,790"/>
-            </circle>
-
-            {/* Route 6 — coral, left-side diagonal */}
-            <path fill="none" stroke="hsl(14,88%,60%)" strokeOpacity="0.25" strokeWidth="1.5" strokeDasharray="5 12"
-              d="M 260,0 Q 200,300 300,600 Q 350,750 280,900"/>
-            <circle r="2.6" fill="hsl(14,88%,60%)" opacity="0.62">
-              <animateMotion dur="13s" repeatCount="indefinite" begin="1s"
-                path="M 260,0 Q 200,300 300,600 Q 350,750 280,900"/>
-            </circle>
-
-            {/* Route 7 — green, centre vertical */}
-            <path fill="none" stroke="hsl(146,60%,47%)" strokeOpacity="0.28" strokeWidth="1.5" strokeDasharray="5 12"
-              d="M 720,0 Q 760,300 700,600 Q 660,750 720,900"/>
-            <circle r="2.4" fill="hsl(146,60%,47%)" opacity="0.62">
-              <animateMotion dur="11s" repeatCount="indefinite" begin="9s"
-                path="M 720,0 Q 760,300 700,600 Q 660,750 720,900"/>
-            </circle>
-
-            {/* Route 8 — coral, right-side diagonal */}
-            <path fill="none" stroke="hsl(14,88%,60%)" strokeOpacity="0.25" strokeWidth="1.5" strokeDasharray="5 12"
-              d="M 1180,0 Q 1240,300 1160,600 Q 1100,750 1180,900"/>
-            <circle r="2.6" fill="hsl(14,88%,60%)" opacity="0.62">
-              <animateMotion dur="15s" repeatCount="indefinite" begin="6s"
-                path="M 1180,0 Q 1240,300 1160,600 Q 1100,750 1180,900"/>
-            </circle>
-
-          </svg>
-        </div>
+        <RoutesBackground />
 
         <div className="container mx-auto relative z-10 grid lg:grid-cols-12 gap-12 items-center">
           <motion.div 
@@ -124,13 +54,6 @@ export default function Home() {
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
             className="lg:col-span-6 text-center lg:text-left mx-auto lg:mx-0 max-w-2xl"
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white shadow-sm border border-border font-semibold text-sm mb-8 text-primary uppercase tracking-wider">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
-              </span>
-              Railway-First Strategy
-            </div>
             
             <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold leading-[1.1] mb-6 text-foreground">
               Moving India's <br/> Freight <span className="font-serif italic text-primary font-normal">Forward.</span>

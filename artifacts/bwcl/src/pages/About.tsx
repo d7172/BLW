@@ -1,4 +1,5 @@
 import { SEO } from "@/seo/SEO";
+import { RoutesBackground } from "@/components/ui/RoutesBackground";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Shield, Lightbulb, Leaf, Users, Award, Target, CheckCircle2, TrendingUp, Anchor, HeartHandshake, Briefcase, Zap, Train, Truck, Ship, Globe2, Package, Network, MapPin, Plane } from "lucide-react";
@@ -30,27 +31,7 @@ export default function About() {
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/10 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/3"></div>
         <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-secondary/10 rounded-full blur-[80px] translate-y-1/2 -translate-x-1/4"></div>
 
-        {/* Animated logistics background */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none select-none">
-          <Globe2   style={{ opacity: 0.05, animation: 'float-slow 12s ease-in-out infinite' }}          className="absolute top-[15%] left-[5%] h-16 w-16 text-primary" />
-          <Train    style={{ opacity: 0.06, animation: 'float-medium 9s ease-in-out infinite 1s' }}      className="absolute top-[20%] right-[10%] h-14 w-14 text-primary" />
-          <Network  style={{ opacity: 0.05, animation: 'drift-x 11s ease-in-out infinite 0.5s' }}        className="absolute bottom-[30%] right-[6%] h-14 w-14 text-primary" />
-          <Ship     style={{ opacity: 0.05, animation: 'float-slow 10s ease-in-out infinite 2s' }}       className="absolute bottom-[20%] left-[8%] h-16 w-16 text-primary" />
-          <MapPin   style={{ opacity: 0.06, animation: 'float-medium 8s ease-in-out infinite 3s' }}      className="absolute top-[50%] left-[18%] h-10 w-10 text-secondary" />
-          <Package  style={{ opacity: 0.05, animation: 'drift-x 13s ease-in-out infinite 1.5s' }}        className="absolute top-[35%] right-[25%] h-10 w-10 text-primary" />
-          <Truck    style={{ opacity: 0.05, animation: 'float-slow 11s ease-in-out infinite 4s' }}       className="absolute bottom-[45%] left-[30%] h-12 w-12 text-primary" />
-          <Plane    style={{ opacity: 0.04, animation: 'drift-x 14s ease-in-out infinite 2.5s' }}        className="absolute top-[10%] right-[35%] h-11 w-11 text-primary" />
-          <Zap      style={{ opacity: 0.05, animation: 'float-medium 7s ease-in-out infinite 0.8s' }}    className="absolute bottom-[15%] right-[30%] h-9 w-9 text-secondary" />
-
-          <svg className="absolute inset-0 w-full h-full" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" fill="none">
-            <path d="M80,600 Q350,380 650,310 Q950,240 1380,160" stroke="hsl(146,60%,47%)" strokeWidth="1.5" strokeDasharray="8 14" opacity="0.1" style={{ animation: 'route-dash 8s linear infinite' }} />
-            <path d="M180,780 Q420,560 700,460 Q980,360 1360,260" stroke="hsl(14,88%,60%)" strokeWidth="1.5" strokeDasharray="10 12" opacity="0.06" style={{ animation: 'route-dash 11s linear infinite 1.5s' }} />
-            <path d="M30,400 Q280,300 560,270 Q840,240 1320,130" stroke="hsl(146,60%,47%)" strokeWidth="1" strokeDasharray="5 16" opacity="0.07" style={{ animation: 'route-dash 9s linear infinite 3s' }} />
-            <circle cx="650"  cy="310" r="6"  fill="hsl(146,60%,47%)" opacity="0.12" />
-            <circle cx="1380" cy="160" r="5"  fill="hsl(146,60%,47%)" opacity="0.12" />
-            <circle cx="700"  cy="460" r="5"  fill="hsl(14,88%,60%)"  opacity="0.1"  />
-          </svg>
-        </div>
+        <RoutesBackground />
 
         <div className="container mx-auto text-center max-w-4xl relative z-10">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white shadow-sm border border-border font-semibold text-sm mb-8 text-primary uppercase tracking-wider">
