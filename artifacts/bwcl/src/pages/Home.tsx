@@ -6,10 +6,6 @@ import { motion } from "framer-motion";
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
 
-const LOGOS = [
-  "TATA STEEL", "RELIANCE", "MARUTI SUZUKI", "ULTRATECH", "JSW", "MAHINDRA", "VEDANTA", "ADANI", "HUL", "ITC", "NESTLE", "AMBUJA"
-];
-
 const INDUSTRIES = [
   { name: "FMCG", icon: Package },
   { name: "Automotive", icon: Truck },
@@ -149,29 +145,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 2. Trusted By */}
-      <section className="py-12 bg-white">
-        <div className="container mx-auto px-4 mb-8 text-center">
-          <p className="text-sm font-bold text-muted-foreground uppercase tracking-widest">Trusted by India's Leading Industries</p>
-        </div>
-        <div className="w-full relative overflow-hidden">
-          <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-white to-transparent z-10"></div>
-          <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-white to-transparent z-10"></div>
-          <div className="flex w-[200%] sm:w-[150%] md:w-[100%] animate-[slide_20s_linear_infinite]">
-            <div className="flex w-1/2 justify-around items-center">
-              {LOGOS.slice(0, 6).map((logo, i) => (
-                <div key={i} className="text-xl md:text-3xl font-extrabold text-slate-200 px-4 md:px-8 whitespace-nowrap font-serif tracking-tighter">{logo}</div>
-              ))}
-            </div>
-            <div className="flex w-1/2 justify-around items-center">
-              {LOGOS.slice(6).map((logo, i) => (
-                <div key={i} className="text-xl md:text-3xl font-extrabold text-slate-200 px-4 md:px-8 whitespace-nowrap font-serif tracking-tighter">{logo}</div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* 3. Strategy Pillars */}
       <section className="py-24 bg-background">
         <div className="container mx-auto px-6">
@@ -263,11 +236,11 @@ export default function Home() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 auto-rows-auto md:auto-rows-[300px]">
-            <div className="bg-slate-800 rounded-[2.5rem] p-10 flex flex-col justify-between group hover:-translate-y-1 transition-all shadow-lg border border-transparent">
+            <div className="bg-slate-100 rounded-[2.5rem] p-10 flex flex-col justify-between group hover:-translate-y-1 transition-all shadow-sm border border-slate-200">
               <Search className="h-12 w-12 text-primary mb-6" />
               <div>
-                <h3 className="text-2xl md:text-3xl font-bold text-white mb-3 font-serif">Tech-Enabled Visibility</h3>
-                <p className="text-slate-300 font-medium">Real-time tracking and control-tower visibility ensuring absolute transparency over every freight movement.</p>
+                <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-3 font-serif">Tech-Enabled Visibility</h3>
+                <p className="text-muted-foreground font-medium">Real-time tracking and control-tower visibility ensuring absolute transparency over every freight movement.</p>
               </div>
             </div>
             

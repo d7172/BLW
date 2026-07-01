@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import logo from "@assets/blw-logo.png";
 
@@ -66,15 +65,8 @@ export default function Navbar() {
           </div>
         </nav>
 
-        {/* Desktop CTA + Mobile Toggle */}
-        <div className="flex items-center gap-3 ml-auto md:ml-0">
-          <Button
-            asChild
-            className="hidden md:flex rounded-full bg-primary hover:bg-primary/90 text-white font-semibold px-6 h-10 shadow-md shadow-primary/20 transition-all hover:scale-105 active:scale-95"
-          >
-            <Link to="/contact">Get Quote</Link>
-          </Button>
-
+        {/* Mobile Toggle */}
+        <div className="ml-auto md:ml-0">
           <button
             className="md:hidden p-2 rounded-full bg-white shadow-sm border border-slate-100 text-foreground"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -108,12 +100,6 @@ export default function Navbar() {
               </Link>
             );
           })}
-          <Button
-            asChild
-            className="mt-3 rounded-full bg-primary hover:bg-primary/90 text-white font-semibold h-12"
-          >
-            <Link to="/contact">Get Quote</Link>
-          </Button>
         </div>
       </div>
     </header>
