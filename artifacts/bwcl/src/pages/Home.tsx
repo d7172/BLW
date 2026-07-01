@@ -372,7 +372,7 @@ export default function Home() {
       </section>
       
       {/* CTA */}
-      <section className="py-28 bg-primary text-white text-center">
+      <section className="py-28 bg-emerald-400 text-white text-center">
         <div className="container mx-auto max-w-3xl">
           <h2 className="text-5xl md:text-6xl font-bold mb-4 font-serif leading-tight">
             Ready to move <span className="italic font-normal">forward?</span>
