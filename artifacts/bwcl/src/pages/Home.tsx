@@ -372,9 +372,14 @@ export default function Home() {
       </section>
       
       {/* CTA */}
-      <section className="py-24 bg-primary text-white text-center">
-        <div className="container mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold mb-8 font-serif">Ready to move forward?</h2>
+      <section className="py-28 bg-primary text-white text-center">
+        <div className="container mx-auto max-w-3xl">
+          <h2 className="text-5xl md:text-6xl font-bold mb-4 font-serif leading-tight">
+            Ready to move <span className="italic font-normal">forward?</span>
+          </h2>
+          <p className="text-white/75 text-lg md:text-xl font-medium mb-10 font-sans">
+            Let's build a smarter, greener supply chain for your business — together.
+          </p>
           <Button asChild size="lg" className="rounded-full bg-white text-primary hover:bg-slate-50 h-16 px-10 text-xl font-bold shadow-xl transition-transform hover:scale-105">
             <Link to="/contact">Partner With Us</Link>
           </Button>
