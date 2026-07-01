@@ -106,10 +106,11 @@ export default function Home() {
 
               {/* Card 1 — 95% Same-Day Delivery */}
               <motion.div
-                initial={{ opacity: 0, y: -70 }}
+                initial={{ opacity: 0, y: -50 }}
                 animate={heroInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ delay: 0.15, type: "spring", stiffness: 260, damping: 22 }}
-                whileHover={{ y: -10, scale: 1.04, boxShadow: "0 24px 48px -8px rgba(0,0,0,0.14)" }}
+                transition={{ delay: 0.2, duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
+                whileHover={{ y: -8, scale: 1.03, boxShadow: "0 20px 40px -8px rgba(0,0,0,0.12)" }}
+                style={{ transition: "box-shadow 0.4s ease" }}
                 className="bg-white p-4 sm:p-8 rounded-[1.5rem] sm:rounded-[2rem] shadow-xl border border-slate-100 flex flex-col justify-between aspect-square cursor-default"
               >
                 <div className="h-10 w-10 sm:h-14 sm:w-14 rounded-xl sm:rounded-2xl bg-secondary/10 flex items-center justify-center mb-auto">
@@ -123,10 +124,10 @@ export default function Home() {
 
               {/* Card 2 — 30K+ Ton Capacity */}
               <motion.div
-                initial={{ opacity: 0, y: -70 }}
+                initial={{ opacity: 0, y: -50 }}
                 animate={heroInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ delay: 0.28, type: "spring", stiffness: 260, damping: 22 }}
-                whileHover={{ y: -10, scale: 1.04, boxShadow: "0 24px 48px -8px rgba(0,0,0,0.18)" }}
+                transition={{ delay: 0.4, duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
+                whileHover={{ y: -8, scale: 1.03, boxShadow: "0 20px 40px -8px rgba(0,0,0,0.16)" }}
                 className="bg-primary text-white p-4 sm:p-8 rounded-[1.5rem] sm:rounded-[2rem] shadow-lg shadow-primary/20 flex flex-col justify-between aspect-square cursor-default"
               >
                 <div className="h-10 w-10 sm:h-14 sm:w-14 rounded-xl sm:rounded-2xl bg-white/20 flex items-center justify-center mb-auto">
@@ -140,10 +141,10 @@ export default function Home() {
 
               {/* Card 3 — 76+ Countries Network */}
               <motion.div
-                initial={{ opacity: 0, y: -70 }}
+                initial={{ opacity: 0, y: -50 }}
                 animate={heroInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ delay: 0.41, type: "spring", stiffness: 260, damping: 22 }}
-                whileHover={{ y: -10, scale: 1.04, boxShadow: "0 24px 48px -8px rgba(0,0,0,0.12)" }}
+                transition={{ delay: 0.6, duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
+                whileHover={{ y: -8, scale: 1.03, boxShadow: "0 20px 40px -8px rgba(0,0,0,0.10)" }}
                 className="bg-emerald-50 p-4 sm:p-8 rounded-[1.5rem] sm:rounded-[2rem] shadow-xl flex flex-col justify-between aspect-square cursor-default"
               >
                 <div className="h-10 w-10 sm:h-14 sm:w-14 rounded-xl sm:rounded-2xl bg-emerald-100 flex items-center justify-center mb-auto">
@@ -157,10 +158,10 @@ export default function Home() {
 
               {/* Card 4 — 65% Cost & Time Savings */}
               <motion.div
-                initial={{ opacity: 0, y: -70 }}
+                initial={{ opacity: 0, y: -50 }}
                 animate={heroInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ delay: 0.54, type: "spring", stiffness: 260, damping: 22 }}
-                whileHover={{ y: -10, scale: 1.04, boxShadow: "0 24px 48px -8px rgba(0,0,0,0.14)" }}
+                transition={{ delay: 0.8, duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
+                whileHover={{ y: -8, scale: 1.03, boxShadow: "0 20px 40px -8px rgba(0,0,0,0.12)" }}
                 className="bg-white p-4 sm:p-8 rounded-[1.5rem] sm:rounded-[2rem] shadow-xl border border-slate-100 flex flex-col justify-between aspect-square cursor-default"
               >
                 <div className="h-10 w-10 sm:h-14 sm:w-14 rounded-xl sm:rounded-2xl bg-primary/10 flex items-center justify-center mb-auto">
