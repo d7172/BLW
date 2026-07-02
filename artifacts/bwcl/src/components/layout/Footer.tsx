@@ -55,7 +55,7 @@ export default function Footer() {
               <Link to="/terms-and-conditions" className="hover:text-foreground transition-colors">Terms & Conditions</Link>
             </div>
           </div>
-          <a href="https://euphoriasolution.com/" target="_blank" rel="noopener noreferrer" className="text-slate-600 hover:text-foreground transition-colors">
+          <a href="https://euphoriasolution.com/" target="_blank" rel="noopener noreferrer" className="text-slate-800 hover:text-foreground transition-colors">
             Made with <span style={{ color: '#ef4444' }}>&#9829;</span> by Euphoria Solution
           </a>
         </div>
