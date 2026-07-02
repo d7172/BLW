@@ -10,14 +10,14 @@ export default function Services() {
       id: "rail-logistics",
       title: "Railway Logistics",
       icon: Train,
-      img: "https://images.unsplash.com/photo-1474487548417-781cb71495f3?w=800&q=75",
+      img: "https://metrorailtoday.com/assets/uploads/gallary/20230921193627.jpg",
       desc: "Our Railway-First Strategy positions us as leaders in green freight. We provide Truck-on-Train solutions, Freight Forwarding for small consignments, and door-to-door connectivity across all Indian rail touchpoints."
     },
     {
       id: "road-logistics",
       title: "Road Logistics",
       icon: Truck,
-      img: "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=800&q=75",
+      img: "https://rmi.org/wp-content/uploads/2025/03/trucks-on-highway-in-india-iStock-1363221069-500x500.jpg",
       desc: "Pan-India ground coverage with LTL, FTL, PTL, and ODC movements. Superfast cargo services powered by our own fleet of 100+ trucks ensuring timely last-mile delivery."
     },
     {
@@ -95,8 +95,8 @@ export default function Services() {
                     </li>
                   ))}
                 </ul>
-                <Button asChild size="lg" className="bg-foreground hover:bg-foreground/90 text-white rounded-full w-full sm:w-auto h-14 px-8 text-lg font-bold">
-                  <Link to="/contact">Get a Quote <ArrowRight className="ml-2 h-5 w-5" /></Link>
+                <Button asChild className="bg-primary/10 hover:bg-primary/20 text-primary border border-primary/20 rounded-full w-full sm:w-auto h-10 px-6 text-sm font-bold">
+                  <Link to="/contact">Get a Quote <ArrowRight className="ml-2 h-4 w-4" /></Link>
                 </Button>
               </div>
             </div>
