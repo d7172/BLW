@@ -64,7 +64,7 @@ export default function Contact() {
       toast({
         variant: "destructive",
         title: "Something went wrong",
-        description: "Please try again or reach us directly at info@bwcl.co.in.",
+        description: "Please try again or reach us directly at info@blwllp.in.",
       });
     }
   };
@@ -103,7 +103,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <h4 className="font-bold text-foreground text-lg">Headquarters</h4>
-                      <p className="text-muted-foreground font-medium mt-2 leading-relaxed">Door No. 5-106(85), Shop No. F16, 1st Floor, Canara Trade Centre, Bovikere, Nagarakatte Puttige Road, Moodbidri, Karnataka - 574227, India</p>
+                      <p className="text-muted-foreground font-medium mt-2 leading-relaxed">Shop No 7, 189, Dhole Patil Road, Pune 411001</p>
                     </div>
                   </div>
                   
@@ -113,7 +113,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <h4 className="font-bold text-foreground text-lg">Phone</h4>
-                      <p className="text-muted-foreground font-medium mt-2">+91 9483077277</p>
+                      <p className="text-muted-foreground font-medium mt-2">+91 888 888 7006</p>
                     </div>
                   </div>
                   
@@ -123,7 +123,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <h4 className="font-bold text-foreground text-lg">Email</h4>
-                      <p className="text-muted-foreground font-medium mt-2">info@bwcl.co.in</p>
+                      <p className="text-muted-foreground font-medium mt-2">info@blwllp.in</p>
                     </div>
                   </div>
                 </div>

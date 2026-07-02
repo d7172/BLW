@@ -42,7 +42,7 @@ export default function About() {
             Driving India's Supply Chain <span className="font-serif italic text-primary font-normal">Forward.</span>
           </h1>
           <p className="text-xl text-muted-foreground font-medium leading-relaxed max-w-2xl mx-auto">
-            Headquartered in Moodbidri, Karnataka, BLW is a premier multimodal logistics company committed to reliability, technology, and sustainable growth.
+            Headquartered in Pune, BLW is a premier multimodal logistics company committed to reliability, technology, and sustainable growth.
           </p>
         </div>
       </section>
