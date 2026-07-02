@@ -47,12 +47,15 @@ export default function Footer() {
 
         </div>
 
-        <div className="pt-8 border-t border-slate-200 flex flex-col md:flex-row items-center md:items-start justify-between gap-6 text-sm font-medium text-slate-400">
-          <div className="flex flex-wrap gap-6">
-            <Link to="/privacy-policy" className="hover:text-foreground transition-colors">Privacy Policy</Link>
-            <Link to="/terms-and-conditions" className="hover:text-foreground transition-colors">Terms & Conditions</Link>
+        <div className="pt-8 border-t border-slate-200 flex flex-col md:flex-row items-center md:items-center justify-between gap-6 text-sm font-medium">
+          <div className="flex flex-col md:flex-row items-center gap-4 md:gap-6 text-slate-400">
+            <p>© {new Date().getFullYear()} Bharat Logistics & Warehousing LLP (BLW). All rights reserved.</p>
+            <div className="flex gap-6">
+              <Link to="/privacy-policy" className="hover:text-foreground transition-colors">Privacy Policy</Link>
+              <Link to="/terms-and-conditions" className="hover:text-foreground transition-colors">Terms & Conditions</Link>
+            </div>
           </div>
-          <a href="https://euphoriasolution.com/" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">
+          <a href="https://euphoriasolution.com/" target="_blank" rel="noopener noreferrer" className="text-slate-600 hover:text-foreground transition-colors">
             Made with <span style={{ color: '#ef4444' }}>&#9829;</span> by Euphoria Solution
           </a>
         </div>

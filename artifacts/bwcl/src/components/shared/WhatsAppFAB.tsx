@@ -35,7 +35,7 @@ export default function WhatsAppFAB() {
         href="https://wa.me/918888887006?text=Hello%20BLW%2C%20I%20am%20interested%20in%20your%20logistics%20services.%20Please%20share%20more%20details."
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-20 md:bottom-8 right-6 md:right-8 z-40 flex h-16 w-16 items-center justify-center rounded-full bg-[#25D366] text-white shadow-xl shadow-[#25D366]/40 transition-transform hover:-translate-y-1 group"
+        className="fixed bottom-28 md:bottom-14 right-6 md:right-8 z-40 flex h-16 w-16 items-center justify-center rounded-full bg-[#25D366] text-white shadow-xl shadow-[#25D366]/40 transition-transform hover:-translate-y-1 group"
         aria-label="Chat on WhatsApp"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
