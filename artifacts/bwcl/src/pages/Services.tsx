@@ -1,8 +1,6 @@
 import { SEO } from "@/seo/SEO";
 import { RoutesBackground } from "@/components/ui/RoutesBackground";
-import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
-import { Train, Truck, Ship, Plane, Warehouse, HardHat, ArrowRight, Globe2, Package, Network, MapPin, Zap } from "lucide-react";
+import { Train, Truck, Ship, Plane, Warehouse, HardHat, Globe2, Package, Network, MapPin, Zap } from "lucide-react";
 
 export default function Services() {
   const services = [
@@ -95,9 +93,6 @@ export default function Services() {
                     </li>
                   ))}
                 </ul>
-                <Button asChild className="bg-primary/10 hover:bg-primary/20 text-primary border border-primary/20 rounded-full w-full sm:w-auto h-10 px-6 text-sm font-bold">
-                  <Link to="/contact">Get a Quote <ArrowRight className="ml-2 h-4 w-4" /></Link>
-                </Button>
               </div>
             </div>
           ))}
