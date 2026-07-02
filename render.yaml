@@ -1,1 +1,13 @@
+services:
+  - type: web
+    name: blw-api
+    runtime: node
+    rootDir: artifacts/api-server
+    buildCommand: pnpm install && pnpm run build
+    startCommand: pnpm run start
 
+  - type: static
+    name: blw-website
+    rootDir: artifacts/bwcl
+    buildCommand: pnpm install && pnpm run build
+    staticPublishPath: dist/public
