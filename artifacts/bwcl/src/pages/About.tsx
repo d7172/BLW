@@ -118,38 +118,38 @@ export default function About() {
 
 
       {/* Partnership Metrics / ROI */}
-      <section className="py-28 bg-[#272B30] mx-4 rounded-[4rem] mb-8" ref={statsRef}>
+      <section className="py-28 bg-white mx-4 rounded-[4rem] mb-8 border border-slate-100 shadow-sm" ref={statsRef}>
         <div className="container mx-auto">
           <div className="text-center max-w-4xl mx-auto mb-20">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 font-serif">Why <span className="italic text-primary font-normal">Choose Us</span></h2>
-            <p className="text-lg md:text-xl text-white/60 font-medium">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6 font-serif">Why <span className="italic text-primary font-normal">Choose Us</span></h2>
+            <p className="text-lg md:text-xl text-muted-foreground font-medium">
               BLW is built on logistical expertise, vision, and operational excellence — delivering transparent, reliable, and cost-efficient multimodal solutions with highly attractive ROI.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-white/10 text-center max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-slate-100 text-center max-w-5xl mx-auto">
             <div className="px-10 py-8">
               <div className="text-5xl md:text-6xl font-bold text-primary mb-3 font-serif leading-none">
                 &lt;3.5 yrs
               </div>
-              <div className="text-white font-bold uppercase tracking-widest text-xs mb-4">GCT Schedule 1 ROI</div>
-              <p className="text-white/50 font-medium text-sm">Accelerated return on strategic terminal investments.</p>
+              <div className="text-foreground font-bold uppercase tracking-widest text-xs mb-4">GCT Schedule 1 ROI</div>
+              <p className="text-muted-foreground font-medium text-sm">Accelerated return on strategic terminal investments.</p>
             </div>
 
             <div className="px-10 py-8">
               <div className="text-5xl md:text-6xl font-bold text-primary mb-3 font-serif leading-none">
                 2.6–3.5 yrs
               </div>
-              <div className="text-white font-bold uppercase tracking-widest text-xs mb-4">DFCCL Schedule 2 ROI</div>
-              <p className="text-white/50 font-medium text-sm">Proven profitability on dedicated freight corridor operations.</p>
+              <div className="text-foreground font-bold uppercase tracking-widest text-xs mb-4">DFCCL Schedule 2 ROI</div>
+              <p className="text-muted-foreground font-medium text-sm">Proven profitability on dedicated freight corridor operations.</p>
             </div>
 
             <div className="px-10 py-8">
               <div className="text-5xl md:text-6xl font-bold text-primary mb-3 font-serif leading-none">
                 &lt;3.5 yrs
               </div>
-              <div className="text-white font-bold uppercase tracking-widest text-xs mb-4">ToT / Wagon Leasing ROI</div>
-              <p className="text-white/50 font-medium text-sm">Maximized capital efficiency on rail asset deployment.</p>
+              <div className="text-foreground font-bold uppercase tracking-widest text-xs mb-4">ToT / Wagon Leasing ROI</div>
+              <p className="text-muted-foreground font-medium text-sm">Maximized capital efficiency on rail asset deployment.</p>
             </div>
           </div>
         </div>
